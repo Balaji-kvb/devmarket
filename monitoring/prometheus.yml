@@ -1,0 +1,10 @@
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+
+scrape_configs:
+  - job_name: 'devmarket'
+    static_configs:
+      - targets: ['app:3000']
+
+# Note: Instrumentation endpoints (metrics) should be added to the app for Prometheus to scrape.

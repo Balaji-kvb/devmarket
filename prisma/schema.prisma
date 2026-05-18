@@ -1,0 +1,137 @@
+// ─── DevMarket — Prisma Schema ──────────────────────────────────
+// PostgreSQL database with NextAuth adapter models + custom models
+// for bookmarks, collections, and activity tracking.
+//
+// Prisma 7: datasource URL is configured in prisma.config.ts
+// ─────────────────────────────────────────────────────────────────
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+// ─── NextAuth Models ────────────────────────────────────────────
+
+model User {
+  id                  String          @id @default(cuid())
+  name                String?
+  email               String          @unique
+  emailVerified       DateTime?
+  image               String?
+  username            String?         @unique
+  bio                 String?
+  website             String?
+  socialLinks         Json?
+  themePreference     ThemePreference?
+  notificationSettings Json?
+  deletedAt           DateTime?
+
+  accounts    Account[]
+  bookmarks   Bookmark[]
+  collections Collection[]
+  recentViews RecentView[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String?
+  access_token      String?
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String?
+  session_state     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+enum ThemePreference {
+  dark
+  light
+  system
+}
+
+// ─── Custom Application Models ──────────────────────────────────
+
+enum ItemType {
+  api
+  tool
+}
+
+enum Visibility {
+  public
+  private
+}
+
+model Bookmark {
+  id       String   @id @default(cuid())
+  userId   String
+  user     User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  type     ItemType
+  slug     String
+  name     String
+  category String
+
+  createdAt DateTime @default(now())
+
+  @@unique([userId, type, slug])
+  @@index([userId])
+}
+
+model Collection {
+  id          String     @id @default(cuid())
+  userId      String
+  user        User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  slug        String     @unique
+  title       String
+  description String?
+  visibility  Visibility @default(private)
+
+  items CollectionItem[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([userId])
+}
+
+model CollectionItem {
+  id           String     @id @default(cuid())
+  collectionId String
+  collection   Collection @relation(fields: [collectionId], references: [id], onDelete: Cascade)
+  type         ItemType
+  slug         String
+  name         String
+  category     String
+
+  addedAt DateTime @default(now())
+
+  @@unique([collectionId, type, slug])
+  @@index([collectionId])
+}
+
+model RecentView {
+  id       String   @id @default(cuid())
+  userId   String
+  user     User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  type     ItemType
+  slug     String
+  name     String
+  category String
+
+  viewedAt DateTime @default(now())
+
+  @@index([userId, viewedAt(sort: Desc)])
+}

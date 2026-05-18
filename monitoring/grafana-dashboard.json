@@ -1,0 +1,13 @@
+{
+  "title": "DevMarket - App Overview",
+  "panels": [
+    {
+      "type": "row",
+      "title": "Performance"
+    },
+    {
+      "title": "Request Rate",
+      "type": "graph"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+
+scrape_configs:
+  # Self-monitoring
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']
+
+  # Next.js Application Metrics
+  # In a real environment, you might use next-prometheus-exporter
+  - job_name: 'devmarket_app'
+    metrics_path: '/api/health' # Simulated metrics endpoint
+    static_configs:
+      - targets: ['app:3000']
+
+  # Nginx Exporter Placeholder
+  - job_name: 'nginx'
+    static_configs:
+      - targets: ['nginx-exporter:9113']
+
+  # Postgres Exporter Placeholder
+  - job_name: 'postgres'
+    static_configs:
+      - targets: ['postgres-exporter:9187']

@@ -1,0 +1,27 @@
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 5.0"
+    }
+  }
+  
+  # Configure remote state bucket for production
+  # backend "s3" {
+  #   bucket         = "devmarket-terraform-state"
+  #   key            = "prod/terraform.tfstate"
+  #   region         = "us-east-1"
+  #   dynamodb_table = "terraform-locks"
+  # }
+}
+
+provider "aws" {
+  region = var.aws_region
+
+  default_tags {
+    tags = {
+      Project     = "DevMarket"
+      ManagedBy   = "Terraform"
+    }
+  }
+}

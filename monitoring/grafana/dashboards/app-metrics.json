@@ -1,0 +1,16 @@
+{
+  "title": "DevMarket Application Metrics",
+  "uid": "devmarket-app-metrics",
+  "panels": [
+    {
+      "type": "stat",
+      "title": "API Health",
+      "targets": [
+        {
+          "expr": "up{job=\"devmarket_app\"}"
+        }
+      ]
+    }
+  ],
+  "schemaVersion": 36
+}
