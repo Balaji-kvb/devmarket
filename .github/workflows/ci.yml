@@ -35,14 +35,14 @@ jobs:
         run: npm run lint --workspace=frontend
       - name: Type check
         run: echo "Skip tsc for workspaces right now"
-      - name: Build
-        run: npm run build --workspace=frontend
       - name: Validate Prisma
         env:
           DATABASE_URL: postgresql://postgres:postgres@localhost:5432/devmarket
         run: |
           npx prisma validate --schema=frontend/prisma/schema.prisma
           npx prisma generate --schema=frontend/prisma/schema.prisma
+      - name: Build
+        run: npm run build --workspace=frontend
       - name: Validate Dockerfile
         uses: docker/build-push-action@v5
         with:
