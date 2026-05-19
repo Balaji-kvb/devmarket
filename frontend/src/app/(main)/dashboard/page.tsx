@@ -78,7 +78,7 @@ export default function DashboardPage() {
             overflow-hidden
           ">
             {userImage ? (
-              // eslint-disable-next-line @next/next/no-img-element
+               
               <img src={userImage} alt={userName} className="w-full h-full object-cover" />
             ) : (
               <User size={24} />

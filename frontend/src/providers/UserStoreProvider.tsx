@@ -143,7 +143,7 @@ export function UserStoreProvider({ children }: { children: ReactNode }) {
     setIsLoaded(false);
     loadData();
     return () => { cancelled = true; };
-  }, [session?.user?.id]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [session?.user?.id]);  
 
   // ── Bookmark Actions ──────────────────────────────────────
 

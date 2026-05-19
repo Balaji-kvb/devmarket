@@ -100,7 +100,7 @@ function NavbarAuth() {
       >
         <div className="w-7 h-7 rounded-full flex items-center justify-center bg-gradient-to-br from-accent to-violet-600 text-white text-[11px] font-bold overflow-hidden">
           {session.user.image ? (
-            // eslint-disable-next-line @next/next/no-img-element
+             
             <img
               src={session.user.image}
               alt={session.user.name || "User"}

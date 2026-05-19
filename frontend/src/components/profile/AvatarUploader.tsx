@@ -20,7 +20,7 @@ export function AvatarUploader({ image, onChange }: AvatarUploaderProps) {
       <div className="flex items-center gap-4">
         <div className="w-20 h-20 rounded-3xl bg-white/[0.03] border border-white/[0.06] overflow-hidden flex items-center justify-center text-text-muted">
           {preview ? (
-            // eslint-disable-next-line @next/next/no-img-element
+             
             <img src={preview} alt="Avatar preview" className="w-full h-full object-cover" />
           ) : (
             <span className="text-xl">?</span>

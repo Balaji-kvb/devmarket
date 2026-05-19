@@ -28,7 +28,7 @@ export function ProfileHeader({
         <div className="flex items-start gap-4">
           <div className="w-20 h-20 rounded-3xl bg-gradient-to-br from-accent to-violet-600 overflow-hidden shadow-lg shadow-black/20 flex items-center justify-center text-white text-3xl font-bold">
             {image ? (
-              // eslint-disable-next-line @next/next/no-img-element
+               
               <img src={image} alt={name} className="w-full h-full object-cover" />
             ) : (
               name.charAt(0)
