@@ -1,113 +1,355 @@
-# DevMarket: End-to-End DevOps Execution Guide
+# DevMarket DevOps Command Handbook
 
-This document is your **step-by-step runbook** for executing the DevMarket DevOps pipeline locally. Follow these steps sequentially to generate the live execution proof (screenshots) required for your university evaluation. 
+# 1. Install Docker
 
-By following this guide, you will demonstrate a "cloud-native full-stack application managed using DevOps infrastructure."
+Verify Docker installation.
 
----
+```bash
+docker --version
+```
 
-## 🏗️ Stage 1: Infrastructure as Code (Terraform)
-*Proves to the evaluator that the server hosting the application is provisioned automatically, not manually.*
+Expected output:
 
-1. **Open your terminal** and navigate to the Terraform directory:
-   ```bash
-   cd devops/terraform
-   ```
-2. **Initialize Terraform** (downloads the AWS provider plugins):
-   ```bash
-   terraform init
-   ```
-3. **Execute the Plan** (simulates the creation of the EC2 instance and VPC):
-   ```bash
-   terraform plan
-   ```
-4. 📸 **Screenshot 1:** Take a screenshot of the terminal output where the green text says `Plan: X to add, 0 to change, 0 to destroy`. This proves the AWS infrastructure (VPC, Security Groups, EC2) is defined and ready.
+```text
+Docker version 24.0.5, build ced0996
+```
 
----
+[Insert Screenshot: Docker version terminal output]
 
-## 🐳 Stage 2: Container Orchestration (Docker & PostgreSQL)
-*Proves that the application is containerized and orchestrated alongside its dependencies (DB, Nginx).*
+Pull essential images.
 
-1. **Return to the root** of your project:
-   ```bash
-   cd ../..
-   ```
-2. **Spin up the entire stack** in the background:
-   ```bash
-   docker-compose -f devops/docker/docker-compose.yml up --build -d
-   ```
-3. **Verify all containers are running**:
-   ```bash
-   docker ps
-   ```
-4. 📸 **Screenshot 2:** Take a screenshot of the `docker ps` output. Ensure the image names `postgres:15-alpine`, `prom/prometheus`, `grafana/grafana`, `nginx:stable-alpine`, and `devmarket-app` are visible and their status says `Up`.
+```bash
+docker pull postgres:15-alpine
+docker pull node:20-alpine
+docker pull prom/prometheus:latest
+docker pull grafana/grafana:latest
+```
+
+Expected output:
+
+```text
+Status: Downloaded newer image for postgres:15-alpine
+```
+
+[Insert Screenshot: Docker pull terminal output]
 
 ---
 
-## 🗄️ Stage 3: Database Integration (pgAdmin)
-*Proves that PostgreSQL is live and securely connected to DevMarket.*
+# 2. Clone Repository
 
-1. Open your web browser and go to **http://localhost:8080**
-2. **Login credentials:**
-   - Email: `admin@admin.com`
-   - Password: `admin`
-3. Click **Add New Server** and enter the following:
-   - **General Tab -> Name:** `DevMarket DB`
-   - **Connection Tab -> Host name/address:** `postgres`
-   - **Connection Tab -> Port:** `5432`
-   - **Connection Tab -> Username:** `postgres`
-   - **Connection Tab -> Password:** `postgres`
-   - Click **Save**.
-4. 📸 **Screenshot 3:** Expand the sidebar `Servers -> DevMarket DB -> Databases -> devmarket`. Take a screenshot showing the connected database.
+Clone the project locally.
 
----
+```bash
+git clone https://github.com/Balaji-kvb/devmarket.git
+cd devmarket
+```
 
-## 📈 Stage 4: Live Observability (Prometheus & Grafana)
-*Proves you have implemented continuous monitoring for your containers.*
+Expected output:
 
-### Prometheus (The Metrics Scraper)
-1. Open your browser and go to **http://localhost:9090/targets**
-2. 📸 **Screenshot 4:** Take a screenshot showing the `devmarket` endpoint listed in the **UP** state. This proves Prometheus is successfully monitoring the Docker network.
+```text
+Cloning into 'devmarket'...
+```
 
-### Grafana (The Visualization Dashboard)
-1. Open your browser and go to **http://localhost:3001**
-2. **Login credentials:**
-   - Username: `admin`
-   - Password: `admin` (You will be prompted to change it, you can click "Skip").
-3. Click **Data Sources** -> **Add data source** -> Select **Prometheus**.
-   - Under Connection URL, enter exactly: `http://prometheus:9090`
-   - Scroll down and click **Save & test**. (It should say "Data source is working").
-4. Go to **Dashboards** -> **Import**.
-5. Upload the file located at `devops/monitoring/grafana-dashboard.json`.
-6. 📸 **Screenshot 5:** Take a screenshot of the beautiful Grafana graphs showing CPU and Memory usage for the DevMarket containers.
+[Insert Screenshot: Git clone completion]
 
 ---
 
-## ⚙️ Stage 5: Continuous Integration (Jenkins)
-*Proves that code commits automatically trigger builds and testing.*
+# 3. Environment Variables
 
-1. Open your locally installed Jenkins dashboard (usually `http://localhost:8080` if not conflicting with pgAdmin, ensure Jenkins is running on a different port if installed locally).
-2. Create a new **Pipeline** item named `DevMarket-CI`.
-3. Under the **Pipeline** section:
-   - Definition: `Pipeline script from SCM`
-   - SCM: `Git`
-   - Repository URL: *(Enter your GitHub repo URL)*
-   - Script Path: `devops/Jenkinsfile`
-4. Click **Save** and then click **Build Now**.
-5. 📸 **Screenshot 6:** Once the build finishes, take a screenshot of the **Stage View** showing the green successful blocks for:
-   - *Install Dependencies*
-   - *Lint & Type Check*
-   - *Build Production App*
-   - *Docker Build*
+Create `.env` in `frontend/`.
+
+```env
+DATABASE_URL="postgresql://postgres:postgres@localhost:5432/postgres"
+NEXTAUTH_URL="http://localhost:3000"
+NEXTAUTH_SECRET="devmarket-secret"
+APP_VERSION="1.0.0"
+NODE_ENV="production"
+```
+
+[Insert Screenshot: VS Code showing .env file]
 
 ---
 
-### Final Submission Checklist
-To get top marks, ensure your final PDF/Presentation tells the story in this exact order:
-1. **Code Commit** (Show Jenkins Pipeline succeeding)
-2. **Infrastructure** (Show Terraform Plan)
-3. **Containerization** (Show `docker ps` output)
-4. **Database** (Show pgAdmin connection)
-5. **Monitoring** (Show Grafana Dashboard)
+# 4. PostgreSQL Setup
 
-*If you follow these steps, you have successfully demonstrated an enterprise-grade DevOps lifecycle centered entirely around the DevMarket application!*
+Generate Prisma client.
+
+```bash
+npx prisma generate
+```
+
+Expected output:
+
+```text
+✔ Generated Prisma Client (v5.x.x)
+```
+
+Run database migrations.
+
+```bash
+npx prisma migrate dev --name init
+```
+
+Expected output:
+
+```text
+Your database is now in sync with your schema.
+```
+
+Open Prisma Studio.
+
+```bash
+npx prisma studio
+```
+
+Expected output:
+
+```text
+Prisma Studio is up on http://localhost:5555
+```
+
+[Insert Screenshot: Prisma Studio UI in browser]
+
+---
+
+# 5. Docker Compose Execution
+
+Start all services in detached mode.
+
+```bash
+cd devops/docker
+docker compose up -d --build
+```
+
+Expected output:
+
+```text
+[+] Running 6/6
+ ✔ Container postgres    Started
+ ✔ Container app         Started
+ ✔ Container pgadmin     Started
+ ✔ Container prometheus  Started
+ ✔ Container grafana     Started
+ ✔ Container nginx       Started
+```
+
+[Insert Screenshot: Docker compose up completion]
+
+Check running containers.
+
+```bash
+docker ps
+```
+
+Expected output:
+
+```text
+CONTAINER ID   IMAGE      COMMAND                  PORTS
+abc123def456   app        "docker-entrypoint.s…"   0.0.0.0:3000->3000/tcp
+```
+
+[Insert Screenshot: docker ps showing all containers running]
+
+Stop and remove all containers.
+
+```bash
+docker compose down
+```
+
+Expected output:
+
+```text
+[+] Running 7/7
+ ✔ Container nginx       Removed
+ ✔ Container grafana     Removed
+ ✔ Container prometheus  Removed
+ ✔ Container pgadmin     Removed
+ ✔ Container app         Removed
+ ✔ Container postgres    Removed
+ ✔ Network devmarket     Removed
+```
+
+[Insert Screenshot: Docker compose down terminal output]
+
+---
+
+# 6. Jenkins Setup
+
+Pull Jenkins image.
+
+```bash
+docker pull jenkins/jenkins:lts
+```
+
+Run Jenkins container.
+
+```bash
+docker run -d -p 8080:8080 -p 50000:50000 --name jenkins jenkins/jenkins:lts
+```
+
+Expected output:
+
+```text
+a1b2c3d4e5f6... (Container ID)
+```
+
+[Insert Screenshot: Jenkins container start]
+
+Get admin password.
+
+```bash
+docker exec jenkins cat /var/jenkins_home/secrets/initialAdminPassword
+```
+
+Expected output:
+
+```text
+4a9b8c7d6e5f4a9b8c7d6e5f4a9b8c7d
+```
+
+[Insert Screenshot: Jenkins unlock password in terminal]
+
+---
+
+# 7. Jenkins Pipeline
+
+1. Create new item > Pipeline
+2. Check "GitHub project", paste URL
+3. Definition: "Pipeline script from SCM"
+4. SCM: Git
+5. Branch Specifier: `*/main`
+6. Script Path: `Jenkinsfile`
+7. Save & click "Build Now"
+
+[Insert Screenshot: Jenkins Pipeline configuration screen]
+[Insert Screenshot: Jenkins Build Success Stage View]
+
+---
+
+# 8. Prometheus Setup
+
+Ensure `devops/monitoring/prometheus.yml` exists.
+
+```yaml
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+
+scrape_configs:
+  - job_name: 'devmarket'
+    metrics_path: /api/metrics
+    static_configs:
+      - targets: ['app:3000']
+```
+
+[Insert Screenshot: prometheus.yml file contents]
+[Insert Screenshot: Prometheus targets page showing app UP]
+
+---
+
+# 9. Grafana Setup
+
+Login at `http://localhost:3001` (admin / admin).
+
+1. Data Sources > Add data source
+2. Select **Prometheus**
+3. URL: `http://prometheus:9090`
+4. Click "Save & test"
+
+[Insert Screenshot: Grafana Add Data Source Screen]
+
+Create Dashboard.
+
+1. New Dashboard > Add Query
+2. Select Prometheus data source
+3. Metric browser: `devmarket_status`
+4. Run query & Save
+
+[Insert Screenshot: Grafana Dashboard showing DevMarket status]
+
+---
+
+# 10. pgAdmin Setup
+
+Login at `http://localhost:8080` (admin@admin.com / admin).
+
+1. Add New Server
+2. Name: `DevMarket DB`
+3. Connection > Host: `postgres`
+4. Port: `5432`
+5. Username: `postgres`
+6. Password: `postgres`
+7. Save
+
+[Insert Screenshot: pgAdmin Add Server connection settings]
+[Insert Screenshot: pgAdmin showing DevMarket tables]
+
+---
+
+# 11. Metrics Verification
+
+Verify metrics endpoint in browser.
+
+```bash
+http://localhost:3000/api/metrics
+```
+
+Expected output:
+
+```text
+# HELP devmarket_status DevMarket application status
+# TYPE devmarket_status gauge
+devmarket_status 1
+```
+
+[Insert Screenshot: Browser showing raw metrics output]
+
+---
+
+# 12. Health Endpoint
+
+Verify health endpoint in browser.
+
+```bash
+http://localhost:3000/api/health
+```
+
+Expected output:
+
+```json
+{"status":"ok"}
+```
+
+[Insert Screenshot: Browser showing JSON health status]
+
+---
+
+# 13. Common Error Fixes
+
+## Error: Prometheus 404
+
+Fix:
+
+```yaml
+scrape_configs:
+  - job_name: 'devmarket'
+    metrics_path: /api/metrics
+    static_configs:
+      - targets: ['app:3000']
+```
+
+## Error: Port 3000 is already in use
+
+Fix:
+
+```bash
+kill -9 $(lsof -t -i:3000)
+```
+
+## Error: Prisma Client not found
+
+Fix:
+
+```bash
+npx prisma generate
+```
