@@ -14,11 +14,11 @@ jobs:
         with:
           node-version: 20
       - name: Install
-        run: npm ci
+        run: npm install
       - name: Build
-        run: npm run build
+        run: npm run build --workspace=frontend
       - name: Generate Prisma client
-        run: npx prisma generate
+        run: npx prisma generate --schema=frontend/prisma/schema.prisma
       - name: Login to DockerHub
         uses: docker/login-action@v2
         with:
@@ -27,8 +27,8 @@ jobs:
       - name: Build and push image
         uses: docker/build-push-action@v5
         with:
-          context: .
-          file: docker/Dockerfile
+          context: frontend/
+          file: devops/docker/Dockerfile
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/devmarket:latest
       - name: Deploy to server (ssh)
