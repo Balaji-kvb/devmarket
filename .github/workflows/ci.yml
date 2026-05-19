@@ -28,7 +28,9 @@ jobs:
         with:
           node-version: 20
       - name: Install dependencies
-        run: npm install
+        run: |
+          rm package-lock.json || true
+          npm install
       - name: Lint
         run: npm run lint --workspace=frontend
       - name: Type check

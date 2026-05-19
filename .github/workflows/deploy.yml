@@ -14,7 +14,9 @@ jobs:
         with:
           node-version: 20
       - name: Install
-        run: npm install
+        run: |
+          rm package-lock.json || true
+          npm install
       - name: Build
         run: npm run build --workspace=frontend
       - name: Generate Prisma client
