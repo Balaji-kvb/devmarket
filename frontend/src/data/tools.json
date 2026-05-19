@@ -1,43 +1,909 @@
 [
-  { "id": "tool-001", "slug": "docker", "name": "Docker", "tagline": "Build, ship, and run containerized applications", "description": "Industry-standard platform for developing, shipping, and running applications inside lightweight, portable containers. Supports multi-stage builds, compose orchestration, and Docker Hub registry.", "category": "DevOps", "platform": ["desktop", "cli"], "license": "open-source", "websiteUrl": "https://www.docker.com", "githubUrl": "https://github.com/docker/cli", "docsUrl": "https://docs.docker.com", "tags": ["containers", "virtualization", "deployment", "microservices"], "featured": true },
-  { "id": "tool-002", "slug": "kubernetes", "name": "Kubernetes", "tagline": "Production-grade container orchestration at scale", "description": "Automate deployment, scaling, and management of containerized applications across clusters. Features self-healing, service discovery, load balancing, and rolling updates.", "category": "DevOps", "platform": ["cli"], "license": "open-source", "websiteUrl": "https://kubernetes.io", "githubUrl": "https://github.com/kubernetes/kubernetes", "docsUrl": "https://kubernetes.io/docs", "tags": ["orchestration", "clusters", "scaling", "infrastructure"], "featured": true },
-  { "id": "tool-003", "slug": "jenkins", "name": "Jenkins", "tagline": "Extensible open-source CI/CD automation server", "description": "Leading automation server for building, testing, and deploying software. Supports pipeline-as-code with Jenkinsfiles, 1,800+ plugins, and distributed builds across multiple agents.", "category": "DevOps", "platform": ["web", "cli"], "license": "open-source", "websiteUrl": "https://www.jenkins.io", "githubUrl": "https://github.com/jenkinsci/jenkins", "docsUrl": "https://www.jenkins.io/doc", "tags": ["ci-cd", "automation", "pipelines", "builds"], "featured": true },
-  { "id": "tool-004", "slug": "terraform", "name": "Terraform", "tagline": "Infrastructure as code for multi-cloud provisioning", "description": "Define cloud infrastructure using declarative HCL configuration files. Supports AWS, Azure, GCP, and 3,000+ providers with state management, plan previews, and modular composition.", "category": "DevOps", "platform": ["cli"], "license": "open-source", "websiteUrl": "https://www.terraform.io", "githubUrl": "https://github.com/hashicorp/terraform", "docsUrl": "https://developer.hashicorp.com/terraform/docs", "tags": ["iac", "cloud", "provisioning", "multi-cloud"], "featured": true },
-  { "id": "tool-005", "slug": "ansible", "name": "Ansible", "tagline": "Agentless IT automation and configuration management", "description": "Automate configuration management, application deployment, and task orchestration using simple YAML playbooks. Agentless architecture connects via SSH with no remote daemon required.", "category": "DevOps", "platform": ["cli"], "license": "open-source", "websiteUrl": "https://www.ansible.com", "githubUrl": "https://github.com/ansible/ansible", "docsUrl": "https://docs.ansible.com", "tags": ["configuration", "automation", "playbooks", "ssh"], "featured": false },
-  { "id": "tool-006", "slug": "prometheus", "name": "Prometheus", "tagline": "Metrics-based monitoring and alerting toolkit", "description": "Pull-based monitoring system with a dimensional data model, PromQL query language, and built-in alerting. Designed for reliability and operational simplicity in dynamic environments.", "category": "DevOps", "platform": ["cli", "web"], "license": "open-source", "websiteUrl": "https://prometheus.io", "githubUrl": "https://github.com/prometheus/prometheus", "docsUrl": "https://prometheus.io/docs", "tags": ["monitoring", "metrics", "alerting", "observability"], "featured": false },
-  { "id": "tool-007", "slug": "grafana", "name": "Grafana", "tagline": "Observability dashboards for metrics and logs visualization", "description": "Create interactive dashboards for Prometheus, Elasticsearch, InfluxDB, and 100+ data sources. Features alerting, annotations, templating, and team collaboration with role-based access.", "category": "DevOps", "platform": ["web", "desktop"], "license": "open-source", "websiteUrl": "https://grafana.com", "githubUrl": "https://github.com/grafana/grafana", "docsUrl": "https://grafana.com/docs", "tags": ["dashboards", "visualization", "observability", "analytics"], "featured": false },
-  { "id": "tool-008", "slug": "postman", "name": "Postman", "tagline": "API development and testing platform for teams", "description": "Design, test, document, and monitor APIs with an intuitive interface. Features collections, environments, automated testing, mock servers, and API documentation publishing.", "category": "Testing", "platform": ["desktop", "web"], "license": "freemium", "websiteUrl": "https://www.postman.com", "docsUrl": "https://learning.postman.com/docs", "tags": ["api-testing", "rest", "collections", "documentation"], "featured": true },
-  { "id": "tool-009", "slug": "selenium", "name": "Selenium", "tagline": "Browser automation framework for web application testing", "description": "Automate web browsers for end-to-end testing across Chrome, Firefox, Safari, and Edge. Supports multiple programming languages with WebDriver protocol and Selenium Grid for parallel execution.", "category": "Testing", "platform": ["cli"], "license": "open-source", "websiteUrl": "https://www.selenium.dev", "githubUrl": "https://github.com/SeleniumHQ/selenium", "docsUrl": "https://www.selenium.dev/documentation", "tags": ["e2e-testing", "browser", "webdriver", "automation"], "featured": false },
-  { "id": "tool-010", "slug": "jest", "name": "Jest", "tagline": "Delightful JavaScript testing with zero configuration", "description": "Complete testing framework with built-in assertions, mocking, code coverage, and snapshot testing. Optimized for React applications with parallel test execution and watch mode.", "category": "Testing", "platform": ["cli"], "license": "open-source", "websiteUrl": "https://jestjs.io", "githubUrl": "https://github.com/jestjs/jest", "docsUrl": "https://jestjs.io/docs/getting-started", "tags": ["unit-testing", "javascript", "mocking", "coverage"], "featured": false },
-  { "id": "tool-011", "slug": "cypress", "name": "Cypress", "tagline": "Fast, reliable end-to-end testing for modern web apps", "description": "Next-generation testing framework running directly in the browser. Features time-travel debugging, automatic waiting, real-time reloading, and network traffic control.", "category": "Testing", "platform": ["desktop", "cli"], "license": "open-source", "websiteUrl": "https://www.cypress.io", "githubUrl": "https://github.com/cypress-io/cypress", "docsUrl": "https://docs.cypress.io", "tags": ["e2e-testing", "component-testing", "debugging", "web"], "featured": false },
-  { "id": "tool-012", "slug": "jmeter", "name": "Apache JMeter", "tagline": "Load testing and performance measurement for web services", "description": "Measure performance and load test web applications, REST APIs, databases, and FTP servers. Supports distributed testing, parameterization, and detailed HTML reporting.", "category": "Testing", "platform": ["desktop", "cli"], "license": "open-source", "websiteUrl": "https://jmeter.apache.org", "githubUrl": "https://github.com/apache/jmeter", "docsUrl": "https://jmeter.apache.org/usermanual", "tags": ["load-testing", "performance", "stress-testing", "benchmarking"], "featured": false },
-  { "id": "tool-013", "slug": "playwright", "name": "Playwright", "tagline": "Cross-browser end-to-end testing by Microsoft", "description": "Reliable end-to-end testing for modern web apps across Chromium, Firefox, and WebKit. Features auto-wait, test isolation, trace viewer, and codegen for recording test scripts.", "category": "Testing", "platform": ["cli"], "license": "open-source", "websiteUrl": "https://playwright.dev", "githubUrl": "https://github.com/microsoft/playwright", "docsUrl": "https://playwright.dev/docs/intro", "tags": ["e2e-testing", "cross-browser", "microsoft", "codegen"], "featured": false },
-  { "id": "tool-014", "slug": "figma", "name": "Figma", "tagline": "Collaborative interface design and prototyping in the browser", "description": "Real-time collaborative design tool for creating interfaces, prototypes, and design systems. Features auto-layout, components, variables, dev mode, and FigJam whiteboarding.", "category": "Design", "platform": ["web", "desktop"], "license": "freemium", "websiteUrl": "https://www.figma.com", "docsUrl": "https://help.figma.com", "tags": ["ui-design", "prototyping", "collaboration", "design-systems"], "featured": true },
-  { "id": "tool-015", "slug": "excalidraw", "name": "Excalidraw", "tagline": "Hand-drawn style whiteboard for technical diagrams", "description": "Virtual whiteboard for sketching diagrams with a hand-drawn aesthetic. Features real-time collaboration, shape libraries, encryption, and embeddable components for documentation.", "category": "Design", "platform": ["web"], "license": "open-source", "websiteUrl": "https://excalidraw.com", "githubUrl": "https://github.com/excalidraw/excalidraw", "tags": ["diagrams", "whiteboard", "sketching", "collaboration"], "featured": false },
-  { "id": "tool-016", "slug": "penpot", "name": "Penpot", "tagline": "Open-source design and prototyping platform", "description": "Web-based design tool built on open standards (SVG). Features components, design tokens, interactive prototyping, and self-hosting capability for enterprise teams.", "category": "Design", "platform": ["web"], "license": "open-source", "websiteUrl": "https://penpot.app", "githubUrl": "https://github.com/penpot/penpot", "docsUrl": "https://help.penpot.app", "tags": ["ui-design", "open-source", "svg", "prototyping"], "featured": false },
-  { "id": "tool-017", "slug": "adobe-xd", "name": "Adobe XD", "tagline": "Vector-based UI/UX design and prototyping tool", "description": "Design, prototype, and share user experiences for web and mobile applications. Features repeat grids, responsive resize, voice prototyping, and Creative Cloud integration.", "category": "Design", "platform": ["desktop"], "license": "paid", "websiteUrl": "https://www.adobe.com/products/xd.html", "docsUrl": "https://helpx.adobe.com/xd/user-guide.html", "tags": ["adobe", "ui-ux", "prototyping", "creative-cloud"], "featured": false },
-  { "id": "tool-018", "slug": "tableplus", "name": "TablePlus", "tagline": "Modern native database management with intuitive UI", "description": "Lightweight GUI client for PostgreSQL, MySQL, SQLite, MongoDB, Redis, and more. Features inline editing, query history, SSH tunneling, and multi-tab workspaces.", "category": "Database", "platform": ["desktop"], "license": "freemium", "websiteUrl": "https://tableplus.com", "docsUrl": "https://docs.tableplus.com", "tags": ["sql", "gui", "database-client", "native"], "featured": false },
-  { "id": "tool-019", "slug": "dbeaver", "name": "DBeaver", "tagline": "Universal database tool for developers and DBAs", "description": "Cross-platform database management supporting 80+ databases. Features SQL editor with auto-completion, ER diagrams, data export, and comparison tools.", "category": "Database", "platform": ["desktop"], "license": "open-source", "websiteUrl": "https://dbeaver.io", "githubUrl": "https://github.com/dbeaver/dbeaver", "docsUrl": "https://dbeaver.com/docs", "tags": ["sql", "database-client", "cross-platform", "er-diagrams"], "featured": false },
-  { "id": "tool-020", "slug": "mongodb-compass", "name": "MongoDB Compass", "tagline": "Visual GUI for exploring and managing MongoDB data", "description": "Official MongoDB GUI for querying, optimizing, and analyzing data. Features aggregation pipeline builder, schema visualization, index management, and real-time performance metrics.", "category": "Database", "platform": ["desktop"], "license": "open-source", "websiteUrl": "https://www.mongodb.com/products/compass", "githubUrl": "https://github.com/mongodb-js/compass", "docsUrl": "https://www.mongodb.com/docs/compass", "tags": ["mongodb", "nosql", "gui", "aggregation"], "featured": false },
-  { "id": "tool-021", "slug": "prisma-studio", "name": "Prisma Studio", "tagline": "Visual database browser for Prisma ORM projects", "description": "GUI for viewing and editing data in Prisma-managed databases. Browse tables, filter records, edit inline, and manage relations with a spreadsheet-like interface.", "category": "Database", "platform": ["web"], "license": "open-source", "websiteUrl": "https://www.prisma.io/studio", "githubUrl": "https://github.com/prisma/prisma", "docsUrl": "https://www.prisma.io/docs/orm/tools/prisma-studio", "tags": ["orm", "prisma", "visual-editor", "typescript"], "featured": false },
-  { "id": "tool-022", "slug": "pgadmin", "name": "pgAdmin", "tagline": "Administration and management platform for PostgreSQL", "description": "Feature-rich open-source management tool for PostgreSQL. Includes a query tool with auto-complete, graphical query planner, backup/restore wizards, and server monitoring dashboard.", "category": "Database", "platform": ["web", "desktop"], "license": "open-source", "websiteUrl": "https://www.pgadmin.org", "githubUrl": "https://github.com/pgadmin-org/pgadmin4", "docsUrl": "https://www.pgadmin.org/docs", "tags": ["postgresql", "admin", "sql", "database-management"], "featured": false },
-  { "id": "tool-023", "slug": "vs-code", "name": "VS Code", "tagline": "Lightweight, extensible source code editor by Microsoft", "description": "Free code editor with IntelliSense, debugging, Git integration, and a marketplace of 50,000+ extensions. Supports remote development, GitHub Copilot, and notebook editing.", "category": "IDE", "platform": ["desktop", "web"], "license": "open-source", "websiteUrl": "https://code.visualstudio.com", "githubUrl": "https://github.com/microsoft/vscode", "docsUrl": "https://code.visualstudio.com/docs", "tags": ["editor", "extensions", "debugging", "typescript"], "featured": true },
-  { "id": "tool-024", "slug": "cursor", "name": "Cursor", "tagline": "AI-first code editor built for pair programming with AI", "description": "Fork of VS Code with deep AI integration. Features multi-line autocomplete, codebase-aware chat, AI-powered refactoring, and natural language code editing with context awareness.", "category": "IDE", "platform": ["desktop"], "license": "freemium", "websiteUrl": "https://cursor.sh", "docsUrl": "https://docs.cursor.com", "tags": ["ai", "editor", "copilot", "autocomplete"], "featured": true },
-  { "id": "tool-025", "slug": "zed", "name": "Zed", "tagline": "High-performance multiplayer code editor in Rust", "description": "GPU-accelerated editor built from scratch in Rust for speed. Features real-time collaboration, integrated terminal, AI assistance, and language server protocol support.", "category": "IDE", "platform": ["desktop"], "license": "open-source", "websiteUrl": "https://zed.dev", "githubUrl": "https://github.com/zed-industries/zed", "docsUrl": "https://zed.dev/docs", "tags": ["rust", "performance", "collaboration", "gpu"], "featured": false },
-  { "id": "tool-026", "slug": "jetbrains-ide", "name": "JetBrains IDEs", "tagline": "Professional IDEs for every language and framework", "description": "Suite of intelligent IDEs including IntelliJ IDEA, WebStorm, PyCharm, and GoLand. Features deep code analysis, refactoring, database tools, and built-in version control.", "category": "IDE", "platform": ["desktop"], "license": "paid", "websiteUrl": "https://www.jetbrains.com", "docsUrl": "https://www.jetbrains.com/help", "tags": ["java", "python", "professional", "refactoring"], "featured": false },
-  { "id": "tool-027", "slug": "neovim", "name": "Neovim", "tagline": "Hyperextensible Vim-based text editor for terminal users", "description": "Modern fork of Vim with Lua scripting, built-in LSP client, tree-sitter parsing, and async plugin architecture. Designed for terminal-native developer workflows.", "category": "IDE", "platform": ["cli"], "license": "open-source", "websiteUrl": "https://neovim.io", "githubUrl": "https://github.com/neovim/neovim", "docsUrl": "https://neovim.io/doc", "tags": ["vim", "terminal", "lua", "extensible"], "featured": false },
-  { "id": "tool-028", "slug": "burp-suite", "name": "Burp Suite", "tagline": "Web application security testing platform", "description": "Industry-standard toolkit for web security testing. Features intercepting proxy, automated scanner, intruder for brute-force attacks, repeater for manual testing, and extensibility via BApp Store.", "category": "Security", "platform": ["desktop"], "license": "freemium", "websiteUrl": "https://portswigger.net/burp", "docsUrl": "https://portswigger.net/burp/documentation", "tags": ["penetration-testing", "web-security", "proxy", "scanning"], "featured": false },
-  { "id": "tool-029", "slug": "owasp-zap", "name": "OWASP ZAP", "tagline": "Open-source web app security scanner for finding vulnerabilities", "description": "Free security tool for finding vulnerabilities in web applications. Features automated scanning, spidering, fuzzing, WebSocket testing, and CI/CD integration for DevSecOps workflows.", "category": "Security", "platform": ["desktop", "cli"], "license": "open-source", "websiteUrl": "https://www.zaproxy.org", "githubUrl": "https://github.com/zaproxy/zaproxy", "docsUrl": "https://www.zaproxy.org/docs", "tags": ["vulnerability-scanning", "owasp", "devsecops", "automated"], "featured": false },
-  { "id": "tool-030", "slug": "wireshark", "name": "Wireshark", "tagline": "Network protocol analyzer for deep packet inspection", "description": "Capture and interactively browse network traffic. Supports 3,000+ protocols, live capture and offline analysis, rich display filters, and export to multiple formats.", "category": "Security", "platform": ["desktop"], "license": "open-source", "websiteUrl": "https://www.wireshark.org", "githubUrl": "https://gitlab.com/wireshark/wireshark", "docsUrl": "https://www.wireshark.org/docs", "tags": ["networking", "packets", "protocol-analysis", "forensics"], "featured": false },
-  { "id": "tool-031", "slug": "nmap", "name": "Nmap", "tagline": "Network discovery and security auditing utility", "description": "Discover hosts and services on a network with port scanning, OS detection, version detection, and scriptable interaction with target services via the Nmap Scripting Engine.", "category": "Security", "platform": ["cli", "desktop"], "license": "open-source", "websiteUrl": "https://nmap.org", "githubUrl": "https://github.com/nmap/nmap", "docsUrl": "https://nmap.org/book/man.html", "tags": ["port-scanning", "network-discovery", "audit", "reconnaissance"], "featured": false },
-  { "id": "tool-032", "slug": "metasploit", "name": "Metasploit", "tagline": "Penetration testing framework for offensive security", "description": "World's most used penetration testing framework. Features exploit modules, payload generation, post-exploitation tools, and integration with vulnerability scanners for comprehensive assessments.", "category": "Security", "platform": ["cli"], "license": "open-source", "websiteUrl": "https://www.metasploit.com", "githubUrl": "https://github.com/rapid7/metasploit-framework", "docsUrl": "https://docs.metasploit.com", "tags": ["exploitation", "payloads", "red-team", "offensive-security"], "featured": false },
-  { "id": "tool-033", "slug": "android-studio", "name": "Android Studio", "tagline": "Official IDE for Android app development by Google", "description": "Complete development environment for building Android apps. Features visual layout editor, APK analyzer, Kotlin support, Jetpack Compose previews, and built-in emulator.", "category": "Mobile", "platform": ["desktop"], "license": "open-source", "websiteUrl": "https://developer.android.com/studio", "docsUrl": "https://developer.android.com/docs", "tags": ["android", "kotlin", "jetpack-compose", "emulator"], "featured": false },
-  { "id": "tool-034", "slug": "xcode", "name": "Xcode", "tagline": "Apple's IDE for building iOS, macOS, and watchOS apps", "description": "Integrated development environment for Apple platforms. Includes Interface Builder, Instruments profiler, TestFlight integration, SwiftUI previews, and Simulator for all Apple devices.", "category": "Mobile", "platform": ["desktop"], "license": "open-source", "websiteUrl": "https://developer.apple.com/xcode", "docsUrl": "https://developer.apple.com/documentation/xcode", "tags": ["ios", "swift", "swiftui", "apple"], "featured": false },
-  { "id": "tool-035", "slug": "expo", "name": "Expo", "tagline": "Framework and platform for universal React Native apps", "description": "Build, deploy, and iterate on native Android, iOS, and web apps from a single React Native codebase. Features hot reloading, OTA updates, push notifications, and managed cloud builds.", "category": "Mobile", "platform": ["cli", "web"], "license": "open-source", "websiteUrl": "https://expo.dev", "githubUrl": "https://github.com/expo/expo", "docsUrl": "https://docs.expo.dev", "tags": ["react-native", "cross-platform", "javascript", "ota-updates"], "featured": false },
-  { "id": "tool-036", "slug": "flutter-sdk", "name": "Flutter SDK", "tagline": "Google's UI toolkit for cross-platform native apps", "description": "Build natively compiled applications for mobile, web, and desktop from a single Dart codebase. Features hot reload, rich widget library, platform-adaptive design, and Impeller rendering engine.", "category": "Mobile", "platform": ["cli", "desktop"], "license": "open-source", "websiteUrl": "https://flutter.dev", "githubUrl": "https://github.com/flutter/flutter", "docsUrl": "https://docs.flutter.dev", "tags": ["dart", "cross-platform", "widgets", "native"], "featured": true },
-  { "id": "tool-037", "slug": "github-actions", "name": "GitHub Actions", "tagline": "CI/CD and workflow automation built into GitHub", "description": "Automate builds, tests, and deployments directly from GitHub repositories. Features reusable workflows, matrix builds, 15,000+ marketplace actions, and self-hosted runners.", "category": "DevOps", "platform": ["web", "cli"], "license": "freemium", "websiteUrl": "https://github.com/features/actions", "docsUrl": "https://docs.github.com/en/actions", "tags": ["ci-cd", "github", "workflows", "automation"], "featured": false },
-  { "id": "tool-038", "slug": "argocd", "name": "Argo CD", "tagline": "Declarative GitOps continuous delivery for Kubernetes", "description": "Kubernetes-native continuous delivery tool following GitOps principles. Automatically syncs application state with Git repositories, supports Helm, Kustomize, and plain YAML manifests.", "category": "DevOps", "platform": ["web", "cli"], "license": "open-source", "websiteUrl": "https://argoproj.github.io/cd", "githubUrl": "https://github.com/argoproj/argo-cd", "docsUrl": "https://argo-cd.readthedocs.io", "tags": ["gitops", "kubernetes", "continuous-delivery", "sync"], "featured": false },
-  { "id": "tool-039", "slug": "k6", "name": "k6", "tagline": "Modern load testing tool using JavaScript test scripts", "description": "Developer-centric load testing tool by Grafana Labs. Write tests in JavaScript, run from CLI or cloud, and integrate results into Grafana dashboards for performance analysis.", "category": "Testing", "platform": ["cli"], "license": "open-source", "websiteUrl": "https://k6.io", "githubUrl": "https://github.com/grafana/k6", "docsUrl": "https://k6.io/docs", "tags": ["load-testing", "performance", "javascript", "grafana"], "featured": false },
-  { "id": "tool-040", "slug": "redis-insight", "name": "Redis Insight", "tagline": "Visual tool for managing and optimizing Redis databases", "description": "Official GUI for Redis with real-time data browsing, CLI integration, memory analysis, slow log inspection, and support for Redis modules including RediSearch and RedisJSON.", "category": "Database", "platform": ["desktop", "web"], "license": "open-source", "websiteUrl": "https://redis.io/insight", "githubUrl": "https://github.com/RedisInsight/RedisInsight", "docsUrl": "https://redis.io/docs/connect/insight", "tags": ["redis", "cache", "gui", "memory-analysis"], "featured": false },
-  { "id": "tool-041", "slug": "sublime-text", "name": "Sublime Text", "tagline": "Sophisticated text editor for code and markup", "description": "Fast, lightweight text editor known for Goto Anything, multiple selections, command palette, and distraction-free mode. Features a Python plugin API and cross-platform support.", "category": "IDE", "platform": ["desktop"], "license": "paid", "websiteUrl": "https://www.sublimetext.com", "docsUrl": "https://www.sublimetext.com/docs", "tags": ["editor", "lightweight", "python", "multi-cursor"], "featured": false }
+  {
+    "id": "tool-001",
+    "slug": "docker",
+    "name": "Docker",
+    "tagline": "Build, ship, and run containerized applications",
+    "description": "Industry-standard platform for developing, shipping, and running applications inside lightweight, portable containers. Supports multi-stage builds, compose orchestration, and Docker Hub registry.",
+    "category": "DevOps",
+    "platform": [
+      "desktop",
+      "cli"
+    ],
+    "license": "open-source",
+    "websiteUrl": "https://www.docker.com",
+    "githubUrl": "https://github.com/docker/cli",
+    "docsUrl": "https://docs.docker.com",
+    "tags": [
+      "containers",
+      "virtualization",
+      "deployment",
+      "microservices"
+    ],
+    "featured": true
+  },
+  {
+    "id": "tool-002",
+    "slug": "kubernetes",
+    "name": "Kubernetes",
+    "tagline": "Production-grade container orchestration at scale",
+    "description": "Automate deployment, scaling, and management of containerized applications across clusters. Features self-healing, service discovery, load balancing, and rolling updates.",
+    "category": "DevOps",
+    "platform": [
+      "cli"
+    ],
+    "license": "open-source",
+    "websiteUrl": "https://kubernetes.io",
+    "githubUrl": "https://github.com/kubernetes/kubernetes",
+    "docsUrl": "https://kubernetes.io/docs",
+    "tags": [
+      "orchestration",
+      "clusters",
+      "scaling",
+      "infrastructure"
+    ],
+    "featured": true
+  },
+  {
+    "id": "tool-003",
+    "slug": "jenkins",
+    "name": "Jenkins",
+    "tagline": "Extensible open-source CI/CD automation server",
+    "description": "Leading automation server for building, testing, and deploying software. Supports pipeline-as-code with Jenkinsfiles, 1,800+ plugins, and distributed builds across multiple agents.",
+    "category": "DevOps",
+    "platform": [
+      "web",
+      "cli"
+    ],
+    "license": "open-source",
+    "websiteUrl": "https://www.jenkins.io",
+    "githubUrl": "https://github.com/jenkinsci/jenkins",
+    "docsUrl": "https://www.jenkins.io/doc",
+    "tags": [
+      "ci-cd",
+      "automation",
+      "pipelines",
+      "builds"
+    ],
+    "featured": true
+  },
+  {
+    "id": "tool-004",
+    "slug": "terraform",
+    "name": "Terraform",
+    "tagline": "Infrastructure as code for multi-cloud provisioning",
+    "description": "Define cloud infrastructure using declarative HCL configuration files. Supports AWS, Azure, GCP, and 3,000+ providers with state management, plan previews, and modular composition.",
+    "category": "DevOps",
+    "platform": [
+      "cli"
+    ],
+    "license": "open-source",
+    "websiteUrl": "https://www.terraform.io",
+    "githubUrl": "https://github.com/hashicorp/terraform",
+    "docsUrl": "https://developer.hashicorp.com/terraform/docs",
+    "tags": [
+      "iac",
+      "cloud",
+      "provisioning",
+      "multi-cloud"
+    ],
+    "featured": true
+  },
+  {
+    "id": "tool-005",
+    "slug": "ansible",
+    "name": "Ansible",
+    "tagline": "Agentless IT automation and configuration management",
+    "description": "Automate configuration management, application deployment, and task orchestration using simple YAML playbooks. Agentless architecture connects via SSH with no remote daemon required.",
+    "category": "DevOps",
+    "platform": [
+      "cli"
+    ],
+    "license": "open-source",
+    "websiteUrl": "https://www.ansible.com",
+    "githubUrl": "https://github.com/ansible/ansible",
+    "docsUrl": "https://docs.ansible.com",
+    "tags": [
+      "configuration",
+      "automation",
+      "playbooks",
+      "ssh"
+    ],
+    "featured": false
+  },
+  {
+    "id": "tool-006",
+    "slug": "prometheus",
+    "name": "Prometheus",
+    "tagline": "Metrics-based monitoring and alerting toolkit",
+    "description": "Pull-based monitoring system with a dimensional data model, PromQL query language, and built-in alerting. Designed for reliability and operational simplicity in dynamic environments.",
+    "category": "DevOps",
+    "platform": [
+      "cli",
+      "web"
+    ],
+    "license": "open-source",
+    "websiteUrl": "https://prometheus.io",
+    "githubUrl": "https://github.com/prometheus/prometheus",
+    "docsUrl": "https://prometheus.io/docs",
+    "tags": [
+      "monitoring",
+      "metrics",
+      "alerting",
+      "observability"
+    ],
+    "featured": false
+  },
+  {
+    "id": "tool-007",
+    "slug": "grafana",
+    "name": "Grafana",
+    "tagline": "Observability dashboards for metrics and logs visualization",
+    "description": "Create interactive dashboards for Prometheus, Elasticsearch, InfluxDB, and 100+ data sources. Features alerting, annotations, templating, and team collaboration with role-based access.",
+    "category": "DevOps",
+    "platform": [
+      "web",
+      "desktop"
+    ],
+    "license": "open-source",
+    "websiteUrl": "https://grafana.com",
+    "githubUrl": "https://github.com/grafana/grafana",
+    "docsUrl": "https://grafana.com/docs",
+    "tags": [
+      "dashboards",
+      "visualization",
+      "observability",
+      "analytics"
+    ],
+    "featured": false
+  },
+  {
+    "id": "tool-008",
+    "slug": "postman",
+    "name": "Postman",
+    "tagline": "API development and testing platform for teams",
+    "description": "Design, test, document, and monitor APIs with an intuitive interface. Features collections, environments, automated testing, mock servers, and API documentation publishing.",
+    "category": "Testing",
+    "platform": [
+      "desktop",
+      "web"
+    ],
+    "license": "freemium",
+    "websiteUrl": "https://www.postman.com",
+    "docsUrl": "https://learning.postman.com/docs",
+    "tags": [
+      "api-testing",
+      "rest",
+      "collections",
+      "documentation"
+    ],
+    "featured": true
+  },
+  {
+    "id": "tool-009",
+    "slug": "selenium",
+    "name": "Selenium",
+    "tagline": "Browser automation framework for web application testing",
+    "description": "Automate web browsers for end-to-end testing across Chrome, Firefox, Safari, and Edge. Supports multiple programming languages with WebDriver protocol and Selenium Grid for parallel execution.",
+    "category": "Testing",
+    "platform": [
+      "cli"
+    ],
+    "license": "open-source",
+    "websiteUrl": "https://www.selenium.dev",
+    "githubUrl": "https://github.com/SeleniumHQ/selenium",
+    "docsUrl": "https://www.selenium.dev/documentation",
+    "tags": [
+      "e2e-testing",
+      "browser",
+      "webdriver",
+      "automation"
+    ],
+    "featured": false
+  },
+  {
+    "id": "tool-010",
+    "slug": "jest",
+    "name": "Jest",
+    "tagline": "Delightful JavaScript testing with zero configuration",
+    "description": "Complete testing framework with built-in assertions, mocking, code coverage, and snapshot testing. Optimized for React applications with parallel test execution and watch mode.",
+    "category": "Testing",
+    "platform": [
+      "cli"
+    ],
+    "license": "open-source",
+    "websiteUrl": "https://jestjs.io",
+    "githubUrl": "https://github.com/jestjs/jest",
+    "docsUrl": "https://jestjs.io/docs/getting-started",
+    "tags": [
+      "unit-testing",
+      "javascript",
+      "mocking",
+      "coverage"
+    ],
+    "featured": false
+  },
+  {
+    "id": "tool-011",
+    "slug": "cypress",
+    "name": "Cypress",
+    "tagline": "Fast, reliable end-to-end testing for modern web apps",
+    "description": "Next-generation testing framework running directly in the browser. Features time-travel debugging, automatic waiting, real-time reloading, and network traffic control.",
+    "category": "Testing",
+    "platform": [
+      "desktop",
+      "cli"
+    ],
+    "license": "open-source",
+    "websiteUrl": "https://www.cypress.io",
+    "githubUrl": "https://github.com/cypress-io/cypress",
+    "docsUrl": "https://docs.cypress.io",
+    "tags": [
+      "e2e-testing",
+      "component-testing",
+      "debugging",
+      "web"
+    ],
+    "featured": false
+  },
+  {
+    "id": "tool-012",
+    "slug": "jmeter",
+    "name": "Apache JMeter",
+    "tagline": "Load testing and performance measurement for web services",
+    "description": "Measure performance and load test web applications, REST APIs, databases, and FTP servers. Supports distributed testing, parameterization, and detailed HTML reporting.",
+    "category": "Testing",
+    "platform": [
+      "desktop",
+      "cli"
+    ],
+    "license": "open-source",
+    "websiteUrl": "https://jmeter.apache.org",
+    "githubUrl": "https://github.com/apache/jmeter",
+    "docsUrl": "https://jmeter.apache.org/usermanual",
+    "tags": [
+      "load-testing",
+      "performance",
+      "stress-testing",
+      "benchmarking"
+    ],
+    "featured": false
+  },
+  {
+    "id": "tool-013",
+    "slug": "playwright",
+    "name": "Playwright",
+    "tagline": "Cross-browser end-to-end testing by Microsoft",
+    "description": "Reliable end-to-end testing for modern web apps across Chromium, Firefox, and WebKit. Features auto-wait, test isolation, trace viewer, and codegen for recording test scripts.",
+    "category": "Testing",
+    "platform": [
+      "cli"
+    ],
+    "license": "open-source",
+    "websiteUrl": "https://playwright.dev",
+    "githubUrl": "https://github.com/microsoft/playwright",
+    "docsUrl": "https://playwright.dev/docs/intro",
+    "tags": [
+      "e2e-testing",
+      "cross-browser",
+      "microsoft",
+      "codegen"
+    ],
+    "featured": false
+  },
+  {
+    "id": "tool-014",
+    "slug": "figma",
+    "name": "Figma",
+    "tagline": "Collaborative interface design and prototyping in the browser",
+    "description": "Real-time collaborative design tool for creating interfaces, prototypes, and design systems. Features auto-layout, components, variables, dev mode, and FigJam whiteboarding.",
+    "category": "Design",
+    "platform": [
+      "web",
+      "desktop"
+    ],
+    "license": "freemium",
+    "websiteUrl": "https://www.figma.com",
+    "docsUrl": "https://help.figma.com",
+    "tags": [
+      "ui-design",
+      "prototyping",
+      "collaboration",
+      "design-systems"
+    ],
+    "featured": true
+  },
+  {
+    "id": "tool-015",
+    "slug": "excalidraw",
+    "name": "Excalidraw",
+    "tagline": "Hand-drawn style whiteboard for technical diagrams",
+    "description": "Virtual whiteboard for sketching diagrams with a hand-drawn aesthetic. Features real-time collaboration, shape libraries, encryption, and embeddable components for documentation.",
+    "category": "Design",
+    "platform": [
+      "web"
+    ],
+    "license": "open-source",
+    "websiteUrl": "https://excalidraw.com",
+    "githubUrl": "https://github.com/excalidraw/excalidraw",
+    "tags": [
+      "diagrams",
+      "whiteboard",
+      "sketching",
+      "collaboration"
+    ],
+    "featured": false
+  },
+  {
+    "id": "tool-016",
+    "slug": "penpot",
+    "name": "Penpot",
+    "tagline": "Open-source design and prototyping platform",
+    "description": "Web-based design tool built on open standards (SVG). Features components, design tokens, interactive prototyping, and self-hosting capability for enterprise teams.",
+    "category": "Design",
+    "platform": [
+      "web"
+    ],
+    "license": "open-source",
+    "websiteUrl": "https://penpot.app",
+    "githubUrl": "https://github.com/penpot/penpot",
+    "docsUrl": "https://help.penpot.app",
+    "tags": [
+      "ui-design",
+      "open-source",
+      "svg",
+      "prototyping"
+    ],
+    "featured": false
+  },
+  {
+    "id": "tool-017",
+    "slug": "adobe-xd",
+    "name": "Adobe XD",
+    "tagline": "Vector-based UI/UX design and prototyping tool",
+    "description": "Design, prototype, and share user experiences for web and mobile applications. Features repeat grids, responsive resize, voice prototyping, and Creative Cloud integration.",
+    "category": "Design",
+    "platform": [
+      "desktop"
+    ],
+    "license": "paid",
+    "websiteUrl": "https://www.adobe.com/products/xd.html",
+    "docsUrl": "https://helpx.adobe.com/xd/user-guide.html",
+    "tags": [
+      "adobe",
+      "ui-ux",
+      "prototyping",
+      "creative-cloud"
+    ],
+    "featured": false
+  },
+  {
+    "id": "tool-018",
+    "slug": "tableplus",
+    "name": "TablePlus",
+    "tagline": "Modern native database management with intuitive UI",
+    "description": "Lightweight GUI client for PostgreSQL, MySQL, SQLite, MongoDB, Redis, and more. Features inline editing, query history, SSH tunneling, and multi-tab workspaces.",
+    "category": "Database",
+    "platform": [
+      "desktop"
+    ],
+    "license": "freemium",
+    "websiteUrl": "https://tableplus.com",
+    "docsUrl": "https://docs.tableplus.com",
+    "tags": [
+      "sql",
+      "gui",
+      "database-client",
+      "native"
+    ],
+    "featured": false
+  },
+  {
+    "id": "tool-019",
+    "slug": "dbeaver",
+    "name": "DBeaver",
+    "tagline": "Universal database tool for developers and DBAs",
+    "description": "Cross-platform database management supporting 80+ databases. Features SQL editor with auto-completion, ER diagrams, data export, and comparison tools.",
+    "category": "Database",
+    "platform": [
+      "desktop"
+    ],
+    "license": "open-source",
+    "websiteUrl": "https://dbeaver.io",
+    "githubUrl": "https://github.com/dbeaver/dbeaver",
+    "docsUrl": "https://dbeaver.com/docs",
+    "tags": [
+      "sql",
+      "database-client",
+      "cross-platform",
+      "er-diagrams"
+    ],
+    "featured": false
+  },
+  {
+    "id": "tool-020",
+    "slug": "mongodb-compass",
+    "name": "MongoDB Compass",
+    "tagline": "Visual GUI for exploring and managing MongoDB data",
+    "description": "Official MongoDB GUI for querying, optimizing, and analyzing data. Features aggregation pipeline builder, schema visualization, index management, and real-time performance metrics.",
+    "category": "Database",
+    "platform": [
+      "desktop"
+    ],
+    "license": "open-source",
+    "websiteUrl": "https://www.mongodb.com/products/compass",
+    "githubUrl": "https://github.com/mongodb-js/compass",
+    "docsUrl": "https://www.mongodb.com/docs/compass",
+    "tags": [
+      "mongodb",
+      "nosql",
+      "gui",
+      "aggregation"
+    ],
+    "featured": false
+  },
+  {
+    "id": "tool-021",
+    "slug": "prisma-studio",
+    "name": "Prisma Studio",
+    "tagline": "Visual database browser for Prisma ORM projects",
+    "description": "GUI for viewing and editing data in Prisma-managed databases. Browse tables, filter records, edit inline, and manage relations with a spreadsheet-like interface.",
+    "category": "Database",
+    "platform": [
+      "web"
+    ],
+    "license": "open-source",
+    "websiteUrl": "https://www.prisma.io/studio",
+    "githubUrl": "https://github.com/prisma/prisma",
+    "docsUrl": "https://www.prisma.io/docs/orm/tools/prisma-studio",
+    "tags": [
+      "orm",
+      "prisma",
+      "visual-editor",
+      "typescript"
+    ],
+    "featured": false
+  },
+  {
+    "id": "tool-022",
+    "slug": "pgadmin",
+    "name": "pgAdmin",
+    "tagline": "Administration and management platform for PostgreSQL",
+    "description": "Feature-rich open-source management tool for PostgreSQL. Includes a query tool with auto-complete, graphical query planner, backup/restore wizards, and server monitoring dashboard.",
+    "category": "Database",
+    "platform": [
+      "web",
+      "desktop"
+    ],
+    "license": "open-source",
+    "websiteUrl": "https://www.pgadmin.org",
+    "githubUrl": "https://github.com/pgadmin-org/pgadmin4",
+    "docsUrl": "https://www.pgadmin.org/docs",
+    "tags": [
+      "postgresql",
+      "admin",
+      "sql",
+      "database-management"
+    ],
+    "featured": false
+  },
+  {
+    "id": "tool-023",
+    "slug": "vs-code",
+    "name": "VS Code",
+    "tagline": "Lightweight, extensible source code editor by Microsoft",
+    "description": "Free code editor with IntelliSense, debugging, Git integration, and a marketplace of 50,000+ extensions. Supports remote development, GitHub Copilot, and notebook editing.",
+    "category": "IDE",
+    "platform": [
+      "desktop",
+      "web"
+    ],
+    "license": "open-source",
+    "websiteUrl": "https://code.visualstudio.com",
+    "githubUrl": "https://github.com/microsoft/vscode",
+    "docsUrl": "https://code.visualstudio.com/docs",
+    "tags": [
+      "editor",
+      "extensions",
+      "debugging",
+      "typescript"
+    ],
+    "featured": true
+  },
+  {
+    "id": "tool-024",
+    "slug": "cursor",
+    "name": "Cursor",
+    "tagline": "AI-first code editor built for pair programming with AI",
+    "description": "Fork of VS Code with deep AI integration. Features multi-line autocomplete, codebase-aware chat, AI-powered refactoring, and natural language code editing with context awareness.",
+    "category": "IDE",
+    "platform": [
+      "desktop"
+    ],
+    "license": "freemium",
+    "websiteUrl": "https://cursor.sh",
+    "docsUrl": "https://docs.cursor.com",
+    "tags": [
+      "ai",
+      "editor",
+      "copilot",
+      "autocomplete"
+    ],
+    "featured": true
+  },
+  {
+    "id": "tool-025",
+    "slug": "zed",
+    "name": "Zed",
+    "tagline": "High-performance multiplayer code editor in Rust",
+    "description": "GPU-accelerated editor built from scratch in Rust for speed. Features real-time collaboration, integrated terminal, AI assistance, and language server protocol support.",
+    "category": "IDE",
+    "platform": [
+      "desktop"
+    ],
+    "license": "open-source",
+    "websiteUrl": "https://zed.dev",
+    "githubUrl": "https://github.com/zed-industries/zed",
+    "docsUrl": "https://zed.dev/docs",
+    "tags": [
+      "rust",
+      "performance",
+      "collaboration",
+      "gpu"
+    ],
+    "featured": false
+  },
+  {
+    "id": "tool-026",
+    "slug": "jetbrains-ide",
+    "name": "JetBrains IDEs",
+    "tagline": "Professional IDEs for every language and framework",
+    "description": "Suite of intelligent IDEs including IntelliJ IDEA, WebStorm, PyCharm, and GoLand. Features deep code analysis, refactoring, database tools, and built-in version control.",
+    "category": "IDE",
+    "platform": [
+      "desktop"
+    ],
+    "license": "paid",
+    "websiteUrl": "https://www.jetbrains.com",
+    "docsUrl": "https://www.jetbrains.com/help",
+    "tags": [
+      "java",
+      "python",
+      "professional",
+      "refactoring"
+    ],
+    "featured": false
+  },
+  {
+    "id": "tool-027",
+    "slug": "neovim",
+    "name": "Neovim",
+    "tagline": "Hyperextensible Vim-based text editor for terminal users",
+    "description": "Modern fork of Vim with Lua scripting, built-in LSP client, tree-sitter parsing, and async plugin architecture. Designed for terminal-native developer workflows.",
+    "category": "IDE",
+    "platform": [
+      "cli"
+    ],
+    "license": "open-source",
+    "websiteUrl": "https://neovim.io",
+    "githubUrl": "https://github.com/neovim/neovim",
+    "docsUrl": "https://neovim.io/doc",
+    "tags": [
+      "vim",
+      "terminal",
+      "lua",
+      "extensible"
+    ],
+    "featured": false
+  },
+  {
+    "id": "tool-028",
+    "slug": "burp-suite",
+    "name": "Burp Suite",
+    "tagline": "Web application security testing platform",
+    "description": "Industry-standard toolkit for web security testing. Features intercepting proxy, automated scanner, intruder for brute-force attacks, repeater for manual testing, and extensibility via BApp Store.",
+    "category": "Security",
+    "platform": [
+      "desktop"
+    ],
+    "license": "freemium",
+    "websiteUrl": "https://portswigger.net/burp",
+    "docsUrl": "https://portswigger.net/burp/documentation",
+    "tags": [
+      "penetration-testing",
+      "web-security",
+      "proxy",
+      "scanning"
+    ],
+    "featured": false
+  },
+  {
+    "id": "tool-029",
+    "slug": "owasp-zap",
+    "name": "OWASP ZAP",
+    "tagline": "Open-source web app security scanner for finding vulnerabilities",
+    "description": "Free security tool for finding vulnerabilities in web applications. Features automated scanning, spidering, fuzzing, WebSocket testing, and CI/CD integration for DevSecOps workflows.",
+    "category": "Security",
+    "platform": [
+      "desktop",
+      "cli"
+    ],
+    "license": "open-source",
+    "websiteUrl": "https://www.zaproxy.org",
+    "githubUrl": "https://github.com/zaproxy/zaproxy",
+    "docsUrl": "https://www.zaproxy.org/docs",
+    "tags": [
+      "vulnerability-scanning",
+      "owasp",
+      "devsecops",
+      "automated"
+    ],
+    "featured": false
+  },
+  {
+    "id": "tool-030",
+    "slug": "wireshark",
+    "name": "Wireshark",
+    "tagline": "Network protocol analyzer for deep packet inspection",
+    "description": "Capture and interactively browse network traffic. Supports 3,000+ protocols, live capture and offline analysis, rich display filters, and export to multiple formats.",
+    "category": "Security",
+    "platform": [
+      "desktop"
+    ],
+    "license": "open-source",
+    "websiteUrl": "https://www.wireshark.org",
+    "githubUrl": "https://gitlab.com/wireshark/wireshark",
+    "docsUrl": "https://www.wireshark.org/docs",
+    "tags": [
+      "networking",
+      "packets",
+      "protocol-analysis",
+      "forensics"
+    ],
+    "featured": false
+  },
+  {
+    "id": "tool-031",
+    "slug": "nmap",
+    "name": "Nmap",
+    "tagline": "Network discovery and security auditing utility",
+    "description": "Discover hosts and services on a network with port scanning, OS detection, version detection, and scriptable interaction with target services via the Nmap Scripting Engine.",
+    "category": "Security",
+    "platform": [
+      "cli",
+      "desktop"
+    ],
+    "license": "open-source",
+    "websiteUrl": "https://nmap.org",
+    "githubUrl": "https://github.com/nmap/nmap",
+    "docsUrl": "https://nmap.org/book/man.html",
+    "tags": [
+      "port-scanning",
+      "network-discovery",
+      "audit",
+      "reconnaissance"
+    ],
+    "featured": false
+  },
+  {
+    "id": "tool-032",
+    "slug": "metasploit",
+    "name": "Metasploit",
+    "tagline": "Penetration testing framework for offensive security",
+    "description": "World's most used penetration testing framework. Features exploit modules, payload generation, post-exploitation tools, and integration with vulnerability scanners for comprehensive assessments.",
+    "category": "Security",
+    "platform": [
+      "cli"
+    ],
+    "license": "open-source",
+    "websiteUrl": "https://www.metasploit.com",
+    "githubUrl": "https://github.com/rapid7/metasploit-framework",
+    "docsUrl": "https://docs.metasploit.com",
+    "tags": [
+      "exploitation",
+      "payloads",
+      "red-team",
+      "offensive-security"
+    ],
+    "featured": false
+  },
+  {
+    "id": "tool-033",
+    "slug": "android-studio",
+    "name": "Android Studio",
+    "tagline": "Official IDE for Android app development by Google",
+    "description": "Complete development environment for building Android apps. Features visual layout editor, APK analyzer, Kotlin support, Jetpack Compose previews, and built-in emulator.",
+    "category": "Mobile",
+    "platform": [
+      "desktop"
+    ],
+    "license": "open-source",
+    "websiteUrl": "https://developer.android.com/studio",
+    "docsUrl": "https://developer.android.com/docs",
+    "tags": [
+      "android",
+      "kotlin",
+      "jetpack-compose",
+      "emulator"
+    ],
+    "featured": false
+  },
+  {
+    "id": "tool-034",
+    "slug": "xcode",
+    "name": "Xcode",
+    "tagline": "Apple's IDE for building iOS, macOS, and watchOS apps",
+    "description": "Integrated development environment for Apple platforms. Includes Interface Builder, Instruments profiler, TestFlight integration, SwiftUI previews, and Simulator for all Apple devices.",
+    "category": "Mobile",
+    "platform": [
+      "desktop"
+    ],
+    "license": "open-source",
+    "websiteUrl": "https://developer.apple.com/xcode",
+    "docsUrl": "https://developer.apple.com/documentation/xcode",
+    "tags": [
+      "ios",
+      "swift",
+      "swiftui",
+      "apple"
+    ],
+    "featured": false
+  },
+  {
+    "id": "tool-035",
+    "slug": "expo",
+    "name": "Expo",
+    "tagline": "Framework and platform for universal React Native apps",
+    "description": "Build, deploy, and iterate on native Android, iOS, and web apps from a single React Native codebase. Features hot reloading, OTA updates, push notifications, and managed cloud builds.",
+    "category": "Mobile",
+    "platform": [
+      "cli",
+      "web"
+    ],
+    "license": "open-source",
+    "websiteUrl": "https://expo.dev",
+    "githubUrl": "https://github.com/expo/expo",
+    "docsUrl": "https://docs.expo.dev",
+    "tags": [
+      "react-native",
+      "cross-platform",
+      "javascript",
+      "ota-updates"
+    ],
+    "featured": false
+  },
+  {
+    "id": "tool-036",
+    "slug": "flutter-sdk",
+    "name": "Flutter SDK",
+    "tagline": "Google's UI toolkit for cross-platform native apps",
+    "description": "Build natively compiled applications for mobile, web, and desktop from a single Dart codebase. Features hot reload, rich widget library, platform-adaptive design, and Impeller rendering engine.",
+    "category": "Mobile",
+    "platform": [
+      "cli",
+      "desktop"
+    ],
+    "license": "open-source",
+    "websiteUrl": "https://flutter.dev",
+    "githubUrl": "https://github.com/flutter/flutter",
+    "docsUrl": "https://docs.flutter.dev",
+    "tags": [
+      "dart",
+      "cross-platform",
+      "widgets",
+      "native"
+    ],
+    "featured": true
+  },
+  {
+    "id": "tool-037",
+    "slug": "github-actions",
+    "name": "GitHub Actions",
+    "tagline": "CI/CD and workflow automation built into GitHub",
+    "description": "Automate builds, tests, and deployments directly from GitHub repositories. Features reusable workflows, matrix builds, 15,000+ marketplace actions, and self-hosted runners.",
+    "category": "DevOps",
+    "platform": [
+      "web",
+      "cli"
+    ],
+    "license": "freemium",
+    "websiteUrl": "https://github.com/features/actions",
+    "docsUrl": "https://docs.github.com/en/actions",
+    "tags": [
+      "ci-cd",
+      "github",
+      "workflows",
+      "automation"
+    ],
+    "featured": false
+  },
+  {
+    "id": "tool-038",
+    "slug": "argocd",
+    "name": "Argo CD",
+    "tagline": "Declarative GitOps continuous delivery for Kubernetes",
+    "description": "Kubernetes-native continuous delivery tool following GitOps principles. Automatically syncs application state with Git repositories, supports Helm, Kustomize, and plain YAML manifests.",
+    "category": "DevOps",
+    "platform": [
+      "web",
+      "cli"
+    ],
+    "license": "open-source",
+    "websiteUrl": "https://argoproj.github.io/cd",
+    "githubUrl": "https://github.com/argoproj/argo-cd",
+    "docsUrl": "https://argo-cd.readthedocs.io",
+    "tags": [
+      "gitops",
+      "kubernetes",
+      "continuous-delivery",
+      "sync"
+    ],
+    "featured": false
+  },
+  {
+    "id": "tool-039",
+    "slug": "k6",
+    "name": "k6",
+    "tagline": "Modern load testing tool using JavaScript test scripts",
+    "description": "Developer-centric load testing tool by Grafana Labs. Write tests in JavaScript, run from CLI or cloud, and integrate results into Grafana dashboards for performance analysis.",
+    "category": "Testing",
+    "platform": [
+      "cli"
+    ],
+    "license": "open-source",
+    "websiteUrl": "https://k6.io",
+    "githubUrl": "https://github.com/grafana/k6",
+    "docsUrl": "https://k6.io/docs",
+    "tags": [
+      "load-testing",
+      "performance",
+      "javascript",
+      "grafana"
+    ],
+    "featured": false
+  },
+  {
+    "id": "tool-040",
+    "slug": "redis-insight",
+    "name": "Redis Insight",
+    "tagline": "Visual tool for managing and optimizing Redis databases",
+    "description": "Official GUI for Redis with real-time data browsing, CLI integration, memory analysis, slow log inspection, and support for Redis modules including RediSearch and RedisJSON.",
+    "category": "Database",
+    "platform": [
+      "desktop",
+      "web"
+    ],
+    "license": "open-source",
+    "websiteUrl": "https://redis.io/insight",
+    "githubUrl": "https://github.com/RedisInsight/RedisInsight",
+    "docsUrl": "https://redis.io/docs/connect/insight",
+    "tags": [
+      "redis",
+      "cache",
+      "gui",
+      "memory-analysis"
+    ],
+    "featured": false
+  },
+  {
+    "id": "tool-041",
+    "slug": "sublime-text",
+    "name": "Sublime Text",
+    "tagline": "Sophisticated text editor for code and markup",
+    "description": "Fast, lightweight text editor known for Goto Anything, multiple selections, command palette, and distraction-free mode. Features a Python plugin API and cross-platform support.",
+    "category": "IDE",
+    "platform": [
+      "desktop"
+    ],
+    "license": "paid",
+    "websiteUrl": "https://www.sublimetext.com",
+    "docsUrl": "https://www.sublimetext.com/docs",
+    "tags": [
+      "editor",
+      "lightweight",
+      "python",
+      "multi-cursor"
+    ],
+    "featured": false
+  }
 ]

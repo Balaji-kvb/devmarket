@@ -6,11 +6,15 @@
     "excerpt": "Teams are adopting GenAI for code generation, documentation, and on-demand research without sacrificing control or quality.",
     "content": "# GenAI for Developer Productivity\n\nGenerative AI is no longer a novelty in engineering workflows. Teams are using it to write boilerplate, draft docs, and debug complex stacks. But the real value comes from knowing where automation helps and where human review stays essential.\n\n## Why developers trust GenAI today\n\n- Faster prototyping through AI-assisted scaffolding\n- On-demand code suggestions inside IDEs\n- Context-aware changelog generation from commit history\n\nOrganizations that treat GenAI as a collaborator instead of a replacement are seeing the best outcomes. That means curated prompts, quality gates, and a feedback loop between engineers and models.\n\n### Build guardrails, not guard towers\n\nA few practical guardrails to add:\n\n- Prompt templates for consistent code generation\n- Review checklists for AI-created changes\n- Automated tests that validate generated output\n\nBy combining AI speed with human review, engineering teams can accelerate delivery while keeping ownership over architecture.\n\n## The future of developer autonomy\n\nThe next generation of tools will let teams define their own code conventions, security policies, and deployment patterns as reusable AI instructions. That means GenAI will not only write code — it will write code the way your organization prefers.\n\n> \"The right GenAI workflow is one where the machine handles repetitive work and the engineer shapes the result.\"\n",
     "category": "GenAI",
-    "tags": ["AI","Productivity tools","LLMs"],
+    "tags": [
+      "AI",
+      "Productivity tools",
+      "LLMs"
+    ],
     "author": "Mina Patel",
     "publishedAt": "2026-05-10T08:30:00.000Z",
     "readTime": 8,
-    "featuredImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "featuredImage": "https://picsum.photos/seed/news-001/1200/800",
     "featured": true,
     "trending": true,
     "source": "DevMarket Editorial"
@@ -22,11 +26,15 @@
     "excerpt": "The new release refines client-server boundaries with built-in streaming, transactional actions, and better TypeScript support.",
     "content": "# Next.js 17 Introduces Second-Generation Server Actions\n\nNext.js 17 focuses on lowering the friction of full-stack components. Server Actions are now more predictable, with first-class TypeScript inference and a smaller payload model.\n\n## What changed\n\n- Streaming support for long-running mutations\n- Automatic debounce for repeated actions\n- Better error boundaries for server-side form handling\n\nThe upgrade path is intentionally gradual. Existing App Router pages can adopt new actions incrementally without a full rewrite.\n\n### Better developer ergonomics\n\nServer Actions now expose richer metadata for logging and retry behavior, so teams can trace invoked workflows from the browser back to the server. That means fewer mysterious form failures and better observability.\n\n## Real-world adoption\n\nEarly adopters are using Next.js 17 to power admin dashboards, CMS editors, and realtime collaboration tools — all without a separate API layer. The resulting architecture is leaner, faster, and easier to maintain.\n",
     "category": "Next.js",
-    "tags": ["Next.js","React","TypeScript"],
+    "tags": [
+      "Next.js",
+      "React",
+      "TypeScript"
+    ],
     "author": "Aaron Chen",
     "publishedAt": "2026-05-08T11:15:00.000Z",
     "readTime": 7,
-    "featuredImage": "https://images.unsplash.com/photo-1517430816045-df4b7de1a1d4?auto=format&fit=crop&w=1200&q=80",
+    "featuredImage": "https://picsum.photos/seed/news-002/1200/800",
     "featured": true,
     "trending": true,
     "source": "Vercel Blog"
@@ -38,11 +46,15 @@
     "excerpt": "A practical guide to modeling data, optimizing queries, and scaling Prisma-backed APIs for SaaS applications.",
     "content": "# Designing High-Performance Data Platforms with Prisma\n\nPrisma is becoming the foundation for many modern data platforms. The key to scalability is thoughtful modeling, selective indexing, and careful query composition.\n\n## Modeling for real use cases\n\nStart by treating each Prisma model as a business capability. That means:\n\n- Mapping user stories to database shapes\n- Normalizing only where it improves clarity\n- Using enums for stable state values\n\nWhen you model for the domain, client-side query patterns become more intuitive and your API surface stays stable.\n\n### Optimize before you scale\n\nCommon Prisma performance wins include:\n\n- Reducing nested `include` statements to only what the UI needs\n- Preferring `select` over `include` for list endpoints\n- Caching computed joins in application memory\n\nThis is especially important for high-throughput SaaS teams where a single slow page can slow down the entire product.\n\n## Production monitoring\n\nPrisma works best when paired with query logging and database observability. Instrument slow queries, track connection pool saturation, and bake these signals into your incident playbooks.\n",
     "category": "Prisma",
-    "tags": ["Database","APIs","Developer Tools"],
+    "tags": [
+      "Database",
+      "APIs",
+      "Developer Tools"
+    ],
     "author": "Nadia Singh",
     "publishedAt": "2026-05-06T09:00:00.000Z",
     "readTime": 9,
-    "featuredImage": "https://images.unsplash.com/photo-1519452575417-5642f6a49e79?auto=format&fit=crop&w=1200&q=80",
+    "featuredImage": "https://picsum.photos/seed/news-003/1200/800",
     "featured": true,
     "trending": false,
     "source": "InfoQ"
@@ -54,11 +66,15 @@
     "excerpt": "Learn how to protect your API surface using contract-first design, OpenAPI schemas, and automated security checks.",
     "content": "# Secure API Design with OpenAPI and AI-Powered Contract Testing\n\nAPI security begins before the first line of code. Contract-first design with OpenAPI helps teams agree on behavior early, then validate every deployment automatically.\n\n## The contract-first workflow\n\nA mature API team typically follows this path:\n\n1. Define endpoints in OpenAPI\n2. Generate mock servers and clients\n3. Add security rules to the schema\n4. Run contract tests against every build\n\nThis approach catches mismatches before production and makes security reviews more objective.\n\n### AI can help maintain contracts\n\nModern tools use AI to compare API changes against release notes, flagging surface-area drift and missing auth requirements. That means teams can ship API updates without losing control.\n\n## Real examples\n\nWhen a payments team switched to contract-first design, they reduced broken integrations by 42% and shortened onboarding for new partners.\n",
     "category": "APIs",
-    "tags": ["API","Security","Open Source"],
+    "tags": [
+      "API",
+      "Security",
+      "Open Source"
+    ],
     "author": "Sofia Martinez",
     "publishedAt": "2026-05-03T14:30:00.000Z",
     "readTime": 8,
-    "featuredImage": "https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=1200&q=80",
+    "featuredImage": "https://picsum.photos/seed/news-004/1200/800",
     "featured": false,
     "trending": true,
     "source": "The New Stack"
@@ -70,11 +86,15 @@
     "excerpt": "A practical architecture for capturing event streams, storing schema-evolving data, and powering analytics without vendor lock-in.",
     "content": "# Building Cloud-Native Data Lakes for Developer Analytics\n\nCloud-native data lakes are the backbone of modern analytics platforms. They let teams store rich event and usage data while keeping compute separate from storage.\n\n## Core principles\n\n- Store raw events in an append-only lake\n- Use managed object storage for durability\n- Build query layers on top of optimized parquet tables\n\nThis separation allows data teams to experiment with multiple engines and avoids tight coupling between storage and compute.\n\n### Practical architecture\n\nA minimal cloud-native stack includes:\n\n- Ingestion: serverless functions or Kafka connectors\n- Storage: S3-compatible buckets\n- Query: Presto, DuckDB, or BigQuery\n- Governance: metadata catalog and lineage tracking\n\nThe goal is to make analytics fast and accessible while keeping the developer experience simple.\n\n## Why it matters\n\nProduct teams can use these lakes to answer questions like \"Which feature drives the highest retention?\" without waiting for quarterly data releases.\n",
     "category": "Cloud",
-    "tags": ["Cloud","Database","DevOps"],
+    "tags": [
+      "Cloud",
+      "Database",
+      "DevOps"
+    ],
     "author": "Elsa Kim",
     "publishedAt": "2026-05-01T12:00:00.000Z",
     "readTime": 8,
-    "featuredImage": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1200&q=80",
+    "featuredImage": "https://picsum.photos/seed/news-005/1200/800",
     "featured": false,
     "trending": false,
     "source": "TechCrunch"
@@ -86,11 +106,15 @@
     "excerpt": "The latest React release simplifies state transitions and adds built-in rendering hints for smoother UI updates.",
     "content": "# React 21 Makes Concurrent Rendering the Default Experience\n\nReact 21 removes the opt-in barrier for concurrent rendering. Developers can now build resilient UI with fewer manual state transition APIs.\n\n## The new mental model\n\nConcurrent rendering is now treated as the default runtime mode. That means developers can focus on component behavior rather than manual scheduling.\n\n### What changes for app code\n\n- `useTransition` remains useful for low-priority updates\n- `startTransition` is encouraged for async refreshes\n- Suspense boundaries are simpler to reason about\n\nThe update is backward-compatible, but teams should audit legacy code that relied on synchronous assumptions.\n\n## Smoother loading states\n\nNew patterns in React 21 make loading placeholders easier to implement without flicker. When a component suspends, the UI can continue rendering remaining content while waiting for the async part.\n",
     "category": "React",
-    "tags": ["React","Web Development","APIs"],
+    "tags": [
+      "React",
+      "Web Development",
+      "APIs"
+    ],
     "author": "Jordan Lee",
     "publishedAt": "2026-04-28T10:45:00.000Z",
     "readTime": 7,
-    "featuredImage": "https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1200&q=80",
+    "featuredImage": "https://picsum.photos/seed/news-006/1200/800",
     "featured": true,
     "trending": true,
     "source": "Dev.to"
@@ -102,11 +126,15 @@
     "excerpt": "Pattern types let developers express structured data constraints directly in type signatures.",
     "content": "# TypeScript 6 Introduces Pattern Types for Safer Schema Validation\n\nTypeScript 6 introduces pattern types, a powerful new construct for modeling structured object shapes and validation constraints in the type system.\n\n## Use cases\n\n- Guaranteeing normalized API payloads\n- Expressing strict config schemas\n- Validating event payloads at the type level\n\nPattern types combine well with runtime validators like Zod or Superstruct, making the contract between type and runtime clearer.\n\n### Developer benefits\n\n- Better autocomplete for structured records\n- Safer transformations without ad-hoc type guards\n- Early feedback during refactoring\n\nThis feature is especially useful for large front-end codebases that consume many external APIs.\n",
     "category": "TypeScript",
-    "tags": ["TypeScript","Web Development","Open Source"],
+    "tags": [
+      "TypeScript",
+      "Web Development",
+      "Open Source"
+    ],
     "author": "Priya Natarajan",
     "publishedAt": "2026-04-25T16:20:00.000Z",
     "readTime": 6,
-    "featuredImage": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80",
+    "featuredImage": "https://picsum.photos/seed/news-007/1200/800",
     "featured": false,
     "trending": false,
     "source": "Vercel Blog"
@@ -118,11 +146,15 @@
     "excerpt": "Small container tweaks can cut build and test times dramatically, especially for monorepos and polyrepo setups.",
     "content": "# Docker Runtime Optimizations for Faster CI Pipelines\n\nCI pipelines are often bottlenecked by Docker build and startup times. A few runtime optimizations can free significant developer time.\n\n## Practical improvements\n\n- Use multi-stage builds with build cache layers\n- Avoid unnecessary dependencies in runtime images\n- Share a common builder image across jobs\n\nThese changes reduce cache misses and keep pipeline steps fast.\n\n### Container runtime flags\n\n- `--init` for correct signal handling\n- `--cpus` to avoid noisy neighbor issues\n- `--tmpfs` for faster ephemeral storage\n\nWhen your tests run too slowly, the image is often only part of the problem. Pay attention to volume mounts, network lookups, and file watchers.\n",
     "category": "Docker",
-    "tags": ["Docker","DevOps","Productivity tools"],
+    "tags": [
+      "Docker",
+      "DevOps",
+      "Productivity tools"
+    ],
     "author": "Mateo Alvarez",
     "publishedAt": "2026-04-22T13:10:00.000Z",
     "readTime": 7,
-    "featuredImage": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80",
+    "featuredImage": "https://picsum.photos/seed/news-008/1200/800",
     "featured": false,
     "trending": false,
     "source": "GitHub Blog"
@@ -134,11 +166,15 @@
     "excerpt": "API-first architecture is now the standard for composable SaaS. Learn how to design the API first and ship a developer-friendly platform.",
     "content": "# Building API-First SaaS Platforms in 2026\n\nAPI-first SaaS platforms give partners and internal teams a consistent way to build on top of your product. The discipline starts with API design, not documentation.\n\n## Design checklist\n\n- Start with resource contracts and response shape\n- Provide versioned change notes for breaking changes\n- Build SDKs from the same schema that powers the API\n\nA good API-first platform treats the API as the primary product. Everything else — UI, docs, evangelism — follows from that.\n\n### Developer experience matters\n\nPublishable SDKs, interactive docs, and stable error codes are not nice-to-haves. They are essential if you want external integrators to adopt your product quickly.\n",
     "category": "Web Development",
-    "tags": ["APIs","Productivity tools","Developer Tools"],
+    "tags": [
+      "APIs",
+      "Productivity tools",
+      "Developer Tools"
+    ],
     "author": "Hannah Rogers",
     "publishedAt": "2026-04-18T15:40:00.000Z",
     "readTime": 8,
-    "featuredImage": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80",
+    "featuredImage": "https://picsum.photos/seed/news-009/1200/800",
     "featured": false,
     "trending": true,
     "source": "DevMarket Editorial"
@@ -150,11 +186,15 @@
     "excerpt": "OPA policies help enforce drift control, namespace access, and compliance across clusters without slowing developers down.",
     "content": "# Secure Kubernetes Workloads with Open Policy Agent\n\nOpen Policy Agent (OPA) is a proven way to keep Kubernetes clusters secure while preserving developer velocity. Policies can be version-controlled and automatically enforced before deployment.\n\n## Policy design patterns\n\n- Require image signatures for production workloads\n- Enforce resource limits and node selectors\n- Block privileged containers and hostPath mounts\n\nWhen teams treat policy as code, they gain confidence that cluster changes are safe and repeatable.\n\n### Observability and feedback\n\nUse OPA diagnostics to show developers exactly which rule triggered and why. Immediate feedback prevents build breaks and encourages better configuration hygiene.\n",
     "category": "Kubernetes",
-    "tags": ["Kubernetes","Security","Cloud"],
+    "tags": [
+      "Kubernetes",
+      "Security",
+      "Cloud"
+    ],
     "author": "Leo Zhang",
     "publishedAt": "2026-04-15T10:05:00.000Z",
     "readTime": 8,
-    "featuredImage": "https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=1200&q=80",
+    "featuredImage": "https://picsum.photos/seed/news-010/1200/800",
     "featured": false,
     "trending": false,
     "source": "The New Stack"
@@ -166,11 +206,15 @@
     "excerpt": "A checklist for spotting slow renders, memory leaks, and network bottlenecks in React Native applications.",
     "content": "# Mobile Performance Audit for React Native Apps\n\nMobile apps need regular performance audits to stay responsive on older devices. This checklist focuses on render, memory, and networking issues.\n\n## Audit steps\n\n- Measure first meaningful paint and interaction latency\n- Analyze render profiler traces for wasted work\n- Track bundle size growth across releases\n\nPerformance issues often hide in third-party modules and heavy list rendering. The audit helps teams prioritize improvements.\n\n### Fix common issues\n\n- Replace anonymous functions inside render loops\n- Use pagination or windowed lists for long feeds\n- Cache remote assets and avoid repeated downloads\n",
     "category": "Mobile",
-    "tags": ["React","Mobile","Productivity tools"],
+    "tags": [
+      "React",
+      "Mobile",
+      "Productivity tools"
+    ],
     "author": "Kelsey Brooks",
     "publishedAt": "2026-04-12T09:55:00.000Z",
     "readTime": 6,
-    "featuredImage": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80",
+    "featuredImage": "https://picsum.photos/seed/news-011/1200/800",
     "featured": false,
     "trending": false,
     "source": "InfoQ"
@@ -182,11 +226,15 @@
     "excerpt": "An analysis of why open source needs better governance models and how foundations are reshaping contributor ecosystems.",
     "content": "# Open Source Sustainability: Communities, Funding, and Governance\n\nOpen source projects are the foundation of the modern stack. Sustainability depends on strong governance, clear contribution pathways, and stable funding.\n\n## Governance best practices\n\n- Define maintainership rules clearly\n- Document contribution workflows and code of conduct\n- Rotate maintainers to avoid burnout\n\nSustainable projects surface decisions transparently and treat contributors with respect. That trust is what keeps ecosystems healthy.\n\n### Funding models\n\n- Corporate sponsorships for critical libraries\n- Grants for core maintainer work\n- Paid support contracts for enterprise adopters\n\nWhen open source projects pair funding with governance, they can continue delivering quality software without shifting risk onto volunteers.\n",
     "category": "Open Source",
-    "tags": ["Open Source","Community","Security"],
+    "tags": [
+      "Open Source",
+      "Community",
+      "Security"
+    ],
     "author": "Priya Natarajan",
     "publishedAt": "2026-04-09T11:45:00.000Z",
     "readTime": 8,
-    "featuredImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "featuredImage": "https://picsum.photos/seed/news-012/1200/800",
     "featured": false,
     "trending": false,
     "source": "TechCrunch"
@@ -198,11 +246,15 @@
     "excerpt": "From OAuth device flows to ephemeral tokens, cloud apps need a fresh identity strategy that scales with distributed systems.",
     "content": "# Modern Authentication Strategies for Cloud Applications\n\nAuthentication is an architectural first class concern for cloud-native software. The old session cookie model works poorly when services are distributed across regions.\n\n## Recommended patterns\n\n- Use short-lived bearer tokens for service-to-service auth\n- Adopt OAuth 2.1 flows for user sign-in\n- Keep refresh tokens in secure storage, not local JS state\n\nThese patterns reduce the blast radius of compromised credentials and keep your app ready for federation.\n\n### Identity as a platform\n\nTreat identity data as a shared platform capability. Centralize user metadata, consent records, and access policies so every service can make the right authorization decision.\n",
     "category": "Security",
-    "tags": ["Security","Cloud","APIs"],
+    "tags": [
+      "Security",
+      "Cloud",
+      "APIs"
+    ],
     "author": "Noah Rivera",
     "publishedAt": "2026-04-05T08:20:00.000Z",
     "readTime": 7,
-    "featuredImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "featuredImage": "https://picsum.photos/seed/news-013/1200/800",
     "featured": false,
     "trending": true,
     "source": "GitHub Blog"
@@ -214,11 +266,15 @@
     "excerpt": "A gateway can simplify data access from many microservices, but performance depends on batching, caching, and schema design.",
     "content": "# Building GraphQL Gateways for High-Performance APIs\n\nGraphQL gateways can make developer lives easier, but they also introduce a hidden performance layer. The key is to optimize what your gateway does and what it delegates.\n\n## Gateway best practices\n\n- Batch requests to backend services\n- Cache schema introspection and query shape info\n- Avoid deep nested resolvers for list-heavy queries\n\nWhen your gateway becomes a choke point, users feel it immediately. Smart caching and schema design keep performance stable.\n\n### Observability matters\n\nInstrument resolver timings, cache hit ratios, and backend service latencies. Those metrics reveal whether the gateway is adding value or becoming a liability.\n",
     "category": "APIs",
-    "tags": ["Web Development","APIs","Open Source"],
+    "tags": [
+      "Web Development",
+      "APIs",
+      "Open Source"
+    ],
     "author": "Mia Torres",
     "publishedAt": "2026-04-02T13:50:00.000Z",
     "readTime": 7,
-    "featuredImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "featuredImage": "https://picsum.photos/seed/news-014/1200/800",
     "featured": false,
     "trending": false,
     "source": "InfoQ"
@@ -230,11 +286,15 @@
     "excerpt": "Startups can stay lean by building with predictable cloud costs in mind instead of deferring expenses until later.",
     "content": "# Cloud Architecture Cost-Aware Design for Startups\n\nCloud cost is one of the biggest controllable risks for startups. Designing architecture with cost-awareness means choosing the right abstractions, not just the latest managed service.\n\n## Practical guidelines\n\n- Use serverless for spiky workloads\n- Prefer managed databases with usage-based scaling\n- Evaluate egress costs early\n\nCost-aware design also means measuring actual usage and revisiting assumptions regularly.\n\n### Avoid complexity traps\n\nA simple architecture is often the cheapest architecture. Choose the smallest stack that meets your product requirements and optimize incrementally from there.\n",
     "category": "Cloud",
-    "tags": ["Cloud","DevOps","Productivity tools"],
+    "tags": [
+      "Cloud",
+      "DevOps",
+      "Productivity tools"
+    ],
     "author": "Lina Roberts",
     "publishedAt": "2026-03-30T09:10:00.000Z",
     "readTime": 8,
-    "featuredImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "featuredImage": "https://picsum.photos/seed/news-015/1200/800",
     "featured": false,
     "trending": false,
     "source": "DevMarket Editorial"
@@ -246,11 +306,15 @@
     "excerpt": "Offline-first mobile apps require thoughtful state reconciliation, conflict resolution, and background sync for a polished user experience.",
     "content": "# Building Offline-First Mobile Apps with Modern Synchronization\n\nOffline-first apps are still rare, but they deliver a better experience for mobile users in unreliable networks. The challenge is keeping local state and remote state in sync.\n\n## Core design patterns\n\n- Local-first storage with a sync queue\n- Conflict resolution strategies for merged updates\n- Background sync when connectivity returns\n\nThese patterns make your app resilient and pleasant on flaky connections.\n\n### Developer tooling\n\nThe ecosystem now includes libraries that handle serialization, mutation replay, and conflict resolution, so teams can build offline-first apps without starting from scratch.\n",
     "category": "Mobile",
-    "tags": ["Mobile","Productivity tools","React"],
+    "tags": [
+      "Mobile",
+      "Productivity tools",
+      "React"
+    ],
     "author": "Samira Hassan",
     "publishedAt": "2026-03-28T10:00:00.000Z",
     "readTime": 7,
-    "featuredImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "featuredImage": "https://picsum.photos/seed/news-016/1200/800",
     "featured": false,
     "trending": false,
     "source": "Vercel Blog"
@@ -262,11 +326,15 @@
     "excerpt": "Use declarative composition, environment profiling, and repeatable local stacks to make Docker Compose more dependable.",
     "content": "# Infrastructure as Code for Docker Compose and Local Dev\n\nDocker Compose is a great local developer experience, but teams need better repeatability and documentation at scale. Treat your compose files like infrastructure code.\n\n## Practical improvements\n\n- Keep services declarative and environment-aware\n- Use `.env` profiles for staging and production parity\n- Add health checks and readiness probes for local dependencies\n\nThese conventions make local dev easier to onboard and avoid \"works on my machine\" problems.\n\n### Version control matters\n\nCommit your compose definitions and use PR reviews to validate changes. That makes local dependency updates visible and safer across teams.\n",
     "category": "Docker",
-    "tags": ["Docker","DevOps","Developer Tools"],
+    "tags": [
+      "Docker",
+      "DevOps",
+      "Developer Tools"
+    ],
     "author": "Priyanka Mehta",
     "publishedAt": "2026-03-25T14:15:00.000Z",
     "readTime": 6,
-    "featuredImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "featuredImage": "https://picsum.photos/seed/news-017/1200/800",
     "featured": false,
     "trending": false,
     "source": "InfoQ"
@@ -278,11 +346,15 @@
     "excerpt": "CSPM tooling is evolving beyond scanning. Modern workflows combine drift detection, policy-as-code, and developer feedback loops.",
     "content": "# Cloud Security Posture Management in 2026\n\nCSPM is no longer just a compliance checkbox — it is part of the developer workflow. Teams need fast feedback when cloud resources drift from policy.\n\n## Key capabilities\n\n- Continuous drift detection for IaC and runtime resources\n- Policy-as-code for cloud guardrails\n- Developer-friendly remediation guidance\n\nWhen security finds are surfaced like code review comments, teams fix issues earlier and with less friction.\n",
     "category": "Security",
-    "tags": ["Security","Cloud","Kubernetes"],
+    "tags": [
+      "Security",
+      "Cloud",
+      "Kubernetes"
+    ],
     "author": "Isabella Garcia",
     "publishedAt": "2026-03-22T08:50:00.000Z",
     "readTime": 7,
-    "featuredImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "featuredImage": "https://picsum.photos/seed/news-018/1200/800",
     "featured": false,
     "trending": false,
     "source": "TechCrunch"
@@ -294,11 +366,15 @@
     "excerpt": "A look at the tools developers rely on today, from AI assistants to local-first observability platforms.",
     "content": "# Developer Tools Ecosystem in 2026: From AI Assistants to Local Cloud Debuggers\n\nThe developer tools landscape continues to shift toward AI-enabled workflows and local-first productivity. This year, the most valuable tools help teams move from idea to production faster.\n\n## Trends to watch\n\n- AI assistants that synthesize documentation, tests, and deploy scripts\n- Local cloud debuggers that mirror production environments\n- Incremental launch tools for canary and feature-flagged rollouts\n\nTools are valuable not because they are shiny, but because they remove cognitive friction and make distributed systems easier to reason about.\n",
     "category": "Productivity tools",
-    "tags": ["Developer Tools","AI","Productivity tools"],
+    "tags": [
+      "Developer Tools",
+      "AI",
+      "Productivity tools"
+    ],
     "author": "Tomás Nguyen",
     "publishedAt": "2026-03-18T15:00:00.000Z",
     "readTime": 7,
-    "featuredImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "featuredImage": "https://picsum.photos/seed/news-019/1200/800",
     "featured": false,
     "trending": false,
     "source": "DevMarket Editorial"
@@ -310,11 +386,15 @@
     "excerpt": "A practical observability strategy for web teams, with a focus on frontend metrics, backend traces, and error budgets.",
     "content": "# Observability Strategy for Large Web Platforms\n\nObservability is the safety net for modern web products. Large platforms need a strategy that combines frontend performance metrics, backend traces, and real user monitoring.\n\n## Strategy pillars\n\n- Measure loading experience and interaction readiness\n- Trace backend requests through service boundaries\n- Define error budgets for key user journeys\n\nObservability should drive decisions, not just reports. If your dashboards are only looked at during incidents, the strategy needs to be more operational.\n\n### Align teams around outcomes\n\nInstead of separate performance and reliability goals, align teams around the user journey. That helps teams ship features without silently eroding the experience.\n",
     "category": "Web Development",
-    "tags": ["Web Development","Developer Tools","Productivity tools"],
+    "tags": [
+      "Web Development",
+      "Developer Tools",
+      "Productivity tools"
+    ],
     "author": "Nina Patel",
     "publishedAt": "2026-03-15T10:20:00.000Z",
     "readTime": 8,
-    "featuredImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "featuredImage": "https://picsum.photos/seed/news-020/1200/800",
     "featured": false,
     "trending": false,
     "source": "Vercel Blog"
@@ -326,11 +406,15 @@
     "excerpt": "A practical migration playbook for teams that need schema changes without interrupting live traffic.",
     "content": "# Building Modern Database Migrations with Zero Downtime\n\nZero-downtime migrations are essential for high-traffic systems. The process requires coordination between schema design, application logic, and deployment strategy.\n\n## Migration best practices\n\n- Use additive schema changes first\n- Avoid blocking table locks in production\n- Backfill data outside of peak windows\n\nThe safest migrations are those that can be rolled forward and backward with predictable state.\n\n### Testing and validation\n\nRun migration tests against production-like data. Validate both the old and new schema paths so you can release without surprise failures.\n",
     "category": "Database",
-    "tags": ["Database","Prisma","DevOps"],
+    "tags": [
+      "Database",
+      "Prisma",
+      "DevOps"
+    ],
     "author": "Jared Kim",
     "publishedAt": "2026-03-10T12:05:00.000Z",
     "readTime": 8,
-    "featuredImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "featuredImage": "https://picsum.photos/seed/news-021/1200/800",
     "featured": false,
     "trending": false,
     "source": "InfoQ"
@@ -342,11 +426,15 @@
     "excerpt": "A modern mobile pattern: cloud-hosted APIs paired with edge cache layers for low-latency content delivery.",
     "content": "# Connected Mobile Apps with Cloud Backends and Edge Caching\n\nMobile apps need to feel fast even on slow networks. A cloud backend combined with edge caching is a reliable pattern for delivering data quickly.\n\n## Architecture patterns\n\n- Use edge caches for static content and commonly requested data\n- Keep authentication validation close to the client with short-lived tokens\n- Build fallback behaviors for offline or degraded networks\n\nThis pattern helps mobile apps deliver consistent performance without compromising security.\n",
     "category": "Mobile",
-    "tags": ["Mobile","Cloud","API"],
+    "tags": [
+      "Mobile",
+      "Cloud",
+      "API"
+    ],
     "author": "Aisha Johnson",
     "publishedAt": "2026-03-06T09:30:00.000Z",
     "readTime": 7,
-    "featuredImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "featuredImage": "https://picsum.photos/seed/news-022/1200/800",
     "featured": false,
     "trending": false,
     "source": "DevMarket Editorial"
@@ -358,11 +446,15 @@
     "excerpt": "Choosing the right license is a strategic decision for open source projects and developer tooling ecosystems.",
     "content": "# Open Source License Selection Guide for Developer Tools\n\nLicense choice shapes adoption, contribution, and community trust. For developer tools, permissive licensing often enables broader ecosystems, while strong copyleft can protect project values.\n\n## Common license families\n\n- MIT / Apache: broad adoption, low friction\n- GPL / AGPL: strong sharing requirements\n- Dual licensing: commercial and open source paths\n\nThe best license is one your maintainers understand and can support over time.\n",
     "category": "Open Source",
-    "tags": ["Open Source","Developer Tools","Security"],
+    "tags": [
+      "Open Source",
+      "Developer Tools",
+      "Security"
+    ],
     "author": "Daniel Price",
     "publishedAt": "2026-03-02T11:55:00.000Z",
     "readTime": 7,
-    "featuredImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "featuredImage": "https://picsum.photos/seed/news-023/1200/800",
     "featured": false,
     "trending": false,
     "source": "TechCrunch"
@@ -374,11 +466,15 @@
     "excerpt": "A developer guide to integrating LLMs while safeguarding user data and maintaining auditability.",
     "content": "# Building LLM-Powered Chatbots with Privacy by Design\n\nLLM chatbots are powerful, but they can also expose sensitive information if not designed carefully. Privacy by design should be included from the first prompt.\n\n## Privacy checklist\n\n- Avoid sending raw user input to third-party models\n- Use redaction and token filtering for PII\n- Log only metadata for auditability\n\nWith these practices, developers can build intelligent assistants that respect user trust and satisfy compliance needs.\n",
     "category": "LLMs",
-    "tags": ["LLMs","AI","Security"],
+    "tags": [
+      "LLMs",
+      "AI",
+      "Security"
+    ],
     "author": "Yara Haddad",
     "publishedAt": "2026-02-25T08:15:00.000Z",
     "readTime": 6,
-    "featuredImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "featuredImage": "https://picsum.photos/seed/news-024/1200/800",
     "featured": false,
     "trending": false,
     "source": "Vercel Blog"

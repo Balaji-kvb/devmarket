@@ -12,10 +12,32 @@
     "pricing": "freemium",
     "docsUrl": "https://openweathermap.org/api",
     "exampleEndpoints": [
-      { "method": "GET", "path": "/weather?q={city}&appid={key}", "description": "Current weather by city name", "params": { "q": "City name", "units": "metric | imperial" }, "exampleResponse": "{\"main\":{\"temp\":22.5,\"humidity\":65},\"weather\":[{\"description\":\"clear sky\"}]}" },
-      { "method": "GET", "path": "/forecast?q={city}&appid={key}", "description": "5-day / 3-hour forecast", "params": { "q": "City name", "cnt": "Number of timestamps" } }
+      {
+        "method": "GET",
+        "path": "/weather?q={city}&appid={key}",
+        "description": "Current weather by city name",
+        "params": {
+          "q": "City name",
+          "units": "metric | imperial"
+        },
+        "exampleResponse": "{\"main\":{\"temp\":22.5,\"humidity\":65},\"weather\":[{\"description\":\"clear sky\"}]}"
+      },
+      {
+        "method": "GET",
+        "path": "/forecast?q={city}&appid={key}",
+        "description": "5-day / 3-hour forecast",
+        "params": {
+          "q": "City name",
+          "cnt": "Number of timestamps"
+        }
+      }
     ],
-    "tags": ["weather", "forecast", "geolocation", "climate"],
+    "tags": [
+      "weather",
+      "forecast",
+      "geolocation",
+      "climate"
+    ],
     "savedCount": 1842,
     "featured": true,
     "createdAt": "2024-01-15T00:00:00.000Z"
@@ -33,10 +55,29 @@
     "pricing": "paid",
     "docsUrl": "https://platform.openai.com/docs",
     "exampleEndpoints": [
-      { "method": "POST", "path": "/chat/completions", "description": "Generate chat completions", "params": { "model": "gpt-4", "messages": "Array of message objects" }, "exampleResponse": "{\"choices\":[{\"message\":{\"role\":\"assistant\",\"content\":\"Hello! How can I help?\"}}]}" },
-      { "method": "GET", "path": "/models", "description": "List available models" }
+      {
+        "method": "POST",
+        "path": "/chat/completions",
+        "description": "Generate chat completions",
+        "params": {
+          "model": "gpt-4",
+          "messages": "Array of message objects"
+        },
+        "exampleResponse": "{\"choices\":[{\"message\":{\"role\":\"assistant\",\"content\":\"Hello! How can I help?\"}}]}"
+      },
+      {
+        "method": "GET",
+        "path": "/models",
+        "description": "List available models"
+      }
     ],
-    "tags": ["ai", "nlp", "chat", "machine-learning", "gpt"],
+    "tags": [
+      "ai",
+      "nlp",
+      "chat",
+      "machine-learning",
+      "gpt"
+    ],
     "savedCount": 3214,
     "featured": true,
     "createdAt": "2024-02-01T00:00:00.000Z"
@@ -54,10 +95,28 @@
     "pricing": "freemium",
     "docsUrl": "https://ai.google.dev/docs",
     "exampleEndpoints": [
-      { "method": "POST", "path": "/models/gemini-pro:generateContent", "description": "Generate content from text prompt", "params": { "contents": "Array of content parts" }, "exampleResponse": "{\"candidates\":[{\"content\":{\"parts\":[{\"text\":\"Generated response\"}]}}]}" },
-      { "method": "GET", "path": "/models", "description": "List available Gemini models" }
+      {
+        "method": "POST",
+        "path": "/models/gemini-pro:generateContent",
+        "description": "Generate content from text prompt",
+        "params": {
+          "contents": "Array of content parts"
+        },
+        "exampleResponse": "{\"candidates\":[{\"content\":{\"parts\":[{\"text\":\"Generated response\"}]}}]}"
+      },
+      {
+        "method": "GET",
+        "path": "/models",
+        "description": "List available Gemini models"
+      }
     ],
-    "tags": ["ai", "multimodal", "google", "llm", "vision"],
+    "tags": [
+      "ai",
+      "multimodal",
+      "google",
+      "llm",
+      "vision"
+    ],
     "savedCount": 2567,
     "featured": true,
     "createdAt": "2024-02-10T00:00:00.000Z"
@@ -75,10 +134,32 @@
     "pricing": "free",
     "docsUrl": "https://api.nasa.gov",
     "exampleEndpoints": [
-      { "method": "GET", "path": "/planetary/apod?api_key={key}", "description": "Astronomy Picture of the Day", "params": { "date": "YYYY-MM-DD (optional)" }, "exampleResponse": "{\"title\":\"NGC 1232: A Grand Design Spiral Galaxy\",\"url\":\"https://apod.nasa.gov/apod/image.jpg\"}" },
-      { "method": "GET", "path": "/neo/rest/v1/feed?api_key={key}", "description": "Near-Earth object tracking", "params": { "start_date": "YYYY-MM-DD", "end_date": "YYYY-MM-DD" } }
+      {
+        "method": "GET",
+        "path": "/planetary/apod?api_key={key}",
+        "description": "Astronomy Picture of the Day",
+        "params": {
+          "date": "YYYY-MM-DD (optional)"
+        },
+        "exampleResponse": "{\"title\":\"NGC 1232: A Grand Design Spiral Galaxy\",\"url\":\"https://apod.nasa.gov/apod/image.jpg\"}"
+      },
+      {
+        "method": "GET",
+        "path": "/neo/rest/v1/feed?api_key={key}",
+        "description": "Near-Earth object tracking",
+        "params": {
+          "start_date": "YYYY-MM-DD",
+          "end_date": "YYYY-MM-DD"
+        }
+      }
     ],
-    "tags": ["space", "astronomy", "government", "science", "images"],
+    "tags": [
+      "space",
+      "astronomy",
+      "government",
+      "science",
+      "images"
+    ],
     "savedCount": 1456,
     "featured": false,
     "createdAt": "2024-01-20T00:00:00.000Z"
@@ -96,11 +177,38 @@
     "pricing": "free",
     "docsUrl": "https://docs.github.com/en/rest",
     "exampleEndpoints": [
-      { "method": "GET", "path": "/users/{username}/repos", "description": "List repositories for a user", "params": { "sort": "created | updated | pushed", "per_page": "Results per page (max 100)" }, "exampleResponse": "[{\"name\":\"my-repo\",\"full_name\":\"user/my-repo\",\"stargazers_count\":42}]" },
-      { "method": "GET", "path": "/repos/{owner}/{repo}", "description": "Get repository details" },
-      { "method": "POST", "path": "/repos/{owner}/{repo}/issues", "description": "Create an issue", "params": { "title": "Issue title", "body": "Issue body (markdown)" } }
+      {
+        "method": "GET",
+        "path": "/users/{username}/repos",
+        "description": "List repositories for a user",
+        "params": {
+          "sort": "created | updated | pushed",
+          "per_page": "Results per page (max 100)"
+        },
+        "exampleResponse": "[{\"name\":\"my-repo\",\"full_name\":\"user/my-repo\",\"stargazers_count\":42}]"
+      },
+      {
+        "method": "GET",
+        "path": "/repos/{owner}/{repo}",
+        "description": "Get repository details"
+      },
+      {
+        "method": "POST",
+        "path": "/repos/{owner}/{repo}/issues",
+        "description": "Create an issue",
+        "params": {
+          "title": "Issue title",
+          "body": "Issue body (markdown)"
+        }
+      }
     ],
-    "tags": ["github", "git", "repositories", "developer", "ci-cd"],
+    "tags": [
+      "github",
+      "git",
+      "repositories",
+      "developer",
+      "ci-cd"
+    ],
     "savedCount": 2891,
     "featured": true,
     "createdAt": "2024-01-05T00:00:00.000Z"
@@ -118,12 +226,40 @@
     "pricing": "free",
     "docsUrl": "https://jsonplaceholder.typicode.com/guide",
     "exampleEndpoints": [
-      { "method": "GET", "path": "/posts", "description": "List all posts", "exampleResponse": "[{\"userId\":1,\"id\":1,\"title\":\"sunt aut facere\",\"body\":\"quia et suscipit...\"}]" },
-      { "method": "GET", "path": "/posts/{id}", "description": "Get a single post" },
-      { "method": "POST", "path": "/posts", "description": "Create a post", "params": { "title": "Post title", "body": "Post content", "userId": "Author ID" } },
-      { "method": "DELETE", "path": "/posts/{id}", "description": "Delete a post" }
+      {
+        "method": "GET",
+        "path": "/posts",
+        "description": "List all posts",
+        "exampleResponse": "[{\"userId\":1,\"id\":1,\"title\":\"sunt aut facere\",\"body\":\"quia et suscipit...\"}]"
+      },
+      {
+        "method": "GET",
+        "path": "/posts/{id}",
+        "description": "Get a single post"
+      },
+      {
+        "method": "POST",
+        "path": "/posts",
+        "description": "Create a post",
+        "params": {
+          "title": "Post title",
+          "body": "Post content",
+          "userId": "Author ID"
+        }
+      },
+      {
+        "method": "DELETE",
+        "path": "/posts/{id}",
+        "description": "Delete a post"
+      }
     ],
-    "tags": ["testing", "mock", "rest", "placeholder", "prototyping"],
+    "tags": [
+      "testing",
+      "mock",
+      "rest",
+      "placeholder",
+      "prototyping"
+    ],
     "savedCount": 2103,
     "featured": false,
     "createdAt": "2024-01-10T00:00:00.000Z"
@@ -141,10 +277,33 @@
     "pricing": "freemium",
     "docsUrl": "https://newsapi.org/docs",
     "exampleEndpoints": [
-      { "method": "GET", "path": "/top-headlines?country=us&apiKey={key}", "description": "Top headlines by country", "params": { "country": "2-letter ISO code", "category": "business | tech | science" }, "exampleResponse": "{\"totalResults\":38,\"articles\":[{\"title\":\"Breaking News\",\"source\":{\"name\":\"CNN\"}}]}" },
-      { "method": "GET", "path": "/everything?q={query}&apiKey={key}", "description": "Search all articles", "params": { "q": "Keywords", "sortBy": "relevancy | popularity | publishedAt" } }
+      {
+        "method": "GET",
+        "path": "/top-headlines?country=us&apiKey={key}",
+        "description": "Top headlines by country",
+        "params": {
+          "country": "2-letter ISO code",
+          "category": "business | tech | science"
+        },
+        "exampleResponse": "{\"totalResults\":38,\"articles\":[{\"title\":\"Breaking News\",\"source\":{\"name\":\"CNN\"}}]}"
+      },
+      {
+        "method": "GET",
+        "path": "/everything?q={query}&apiKey={key}",
+        "description": "Search all articles",
+        "params": {
+          "q": "Keywords",
+          "sortBy": "relevancy | popularity | publishedAt"
+        }
+      }
     ],
-    "tags": ["news", "media", "headlines", "journalism", "search"],
+    "tags": [
+      "news",
+      "media",
+      "headlines",
+      "journalism",
+      "search"
+    ],
     "savedCount": 1234,
     "featured": false,
     "createdAt": "2024-01-25T00:00:00.000Z"
@@ -162,10 +321,29 @@
     "pricing": "freemium",
     "docsUrl": "https://docs.coingecko.com",
     "exampleEndpoints": [
-      { "method": "GET", "path": "/coins/markets?vs_currency=usd", "description": "List coins with market data", "params": { "vs_currency": "Target currency", "order": "market_cap_desc" }, "exampleResponse": "[{\"id\":\"bitcoin\",\"current_price\":67500,\"market_cap\":1320000000000}]" },
-      { "method": "GET", "path": "/simple/price?ids=bitcoin&vs_currencies=usd", "description": "Simple price lookup" }
+      {
+        "method": "GET",
+        "path": "/coins/markets?vs_currency=usd",
+        "description": "List coins with market data",
+        "params": {
+          "vs_currency": "Target currency",
+          "order": "market_cap_desc"
+        },
+        "exampleResponse": "[{\"id\":\"bitcoin\",\"current_price\":67500,\"market_cap\":1320000000000}]"
+      },
+      {
+        "method": "GET",
+        "path": "/simple/price?ids=bitcoin&vs_currencies=usd",
+        "description": "Simple price lookup"
+      }
     ],
-    "tags": ["crypto", "bitcoin", "finance", "market-data", "pricing"],
+    "tags": [
+      "crypto",
+      "bitcoin",
+      "finance",
+      "market-data",
+      "pricing"
+    ],
     "savedCount": 1678,
     "featured": false,
     "createdAt": "2024-02-05T00:00:00.000Z"
@@ -183,9 +361,24 @@
     "pricing": "free",
     "docsUrl": "https://randomuser.me/documentation",
     "exampleEndpoints": [
-      { "method": "GET", "path": "/?results=5", "description": "Generate random users", "params": { "results": "Number of users", "nat": "Nationality filter" }, "exampleResponse": "{\"results\":[{\"name\":{\"first\":\"Jane\",\"last\":\"Doe\"},\"email\":\"jane@example.com\"}]}" }
+      {
+        "method": "GET",
+        "path": "/?results=5",
+        "description": "Generate random users",
+        "params": {
+          "results": "Number of users",
+          "nat": "Nationality filter"
+        },
+        "exampleResponse": "{\"results\":[{\"name\":{\"first\":\"Jane\",\"last\":\"Doe\"},\"email\":\"jane@example.com\"}]}"
+      }
     ],
-    "tags": ["testing", "mock-data", "users", "faker", "prototyping"],
+    "tags": [
+      "testing",
+      "mock-data",
+      "users",
+      "faker",
+      "prototyping"
+    ],
     "savedCount": 987,
     "featured": false,
     "createdAt": "2024-01-18T00:00:00.000Z"
@@ -203,9 +396,23 @@
     "pricing": "free",
     "docsUrl": "https://ip-api.com/docs",
     "exampleEndpoints": [
-      { "method": "GET", "path": "/json/{ip}", "description": "Geolocate an IP address", "params": { "fields": "Comma-separated field list" }, "exampleResponse": "{\"country\":\"United States\",\"city\":\"San Francisco\",\"lat\":37.7749,\"lon\":-122.4194,\"isp\":\"Cloudflare\"}" }
+      {
+        "method": "GET",
+        "path": "/json/{ip}",
+        "description": "Geolocate an IP address",
+        "params": {
+          "fields": "Comma-separated field list"
+        },
+        "exampleResponse": "{\"country\":\"United States\",\"city\":\"San Francisco\",\"lat\":37.7749,\"lon\":-122.4194,\"isp\":\"Cloudflare\"}"
+      }
     ],
-    "tags": ["geolocation", "ip", "location", "maps", "networking"],
+    "tags": [
+      "geolocation",
+      "ip",
+      "location",
+      "maps",
+      "networking"
+    ],
     "savedCount": 1123,
     "featured": false,
     "createdAt": "2024-01-22T00:00:00.000Z"
@@ -223,9 +430,25 @@
     "pricing": "paid",
     "docsUrl": "https://www.twilio.com/docs",
     "exampleEndpoints": [
-      { "method": "POST", "path": "/Accounts/{sid}/Messages.json", "description": "Send an SMS message", "params": { "To": "Recipient phone number", "From": "Twilio phone number", "Body": "Message text" }, "exampleResponse": "{\"sid\":\"SM123\",\"status\":\"queued\",\"to\":\"+1234567890\"}" }
+      {
+        "method": "POST",
+        "path": "/Accounts/{sid}/Messages.json",
+        "description": "Send an SMS message",
+        "params": {
+          "To": "Recipient phone number",
+          "From": "Twilio phone number",
+          "Body": "Message text"
+        },
+        "exampleResponse": "{\"sid\":\"SM123\",\"status\":\"queued\",\"to\":\"+1234567890\"}"
+      }
     ],
-    "tags": ["sms", "voice", "messaging", "communication", "whatsapp"],
+    "tags": [
+      "sms",
+      "voice",
+      "messaging",
+      "communication",
+      "whatsapp"
+    ],
     "savedCount": 1567,
     "featured": false,
     "createdAt": "2024-02-12T00:00:00.000Z"
@@ -243,10 +466,33 @@
     "pricing": "freemium",
     "docsUrl": "https://docs.sendgrid.com",
     "exampleEndpoints": [
-      { "method": "POST", "path": "/mail/send", "description": "Send an email", "params": { "personalizations": "Array of recipients", "from": "Sender email", "content": "Email body" }, "exampleResponse": "" },
-      { "method": "GET", "path": "/stats", "description": "Retrieve email statistics", "params": { "start_date": "YYYY-MM-DD" } }
+      {
+        "method": "POST",
+        "path": "/mail/send",
+        "description": "Send an email",
+        "params": {
+          "personalizations": "Array of recipients",
+          "from": "Sender email",
+          "content": "Email body"
+        },
+        "exampleResponse": ""
+      },
+      {
+        "method": "GET",
+        "path": "/stats",
+        "description": "Retrieve email statistics",
+        "params": {
+          "start_date": "YYYY-MM-DD"
+        }
+      }
     ],
-    "tags": ["email", "transactional", "marketing", "delivery", "smtp"],
+    "tags": [
+      "email",
+      "transactional",
+      "marketing",
+      "delivery",
+      "smtp"
+    ],
     "savedCount": 1345,
     "featured": false,
     "createdAt": "2024-02-08T00:00:00.000Z"
@@ -264,10 +510,33 @@
     "pricing": "paid",
     "docsUrl": "https://stripe.com/docs/api",
     "exampleEndpoints": [
-      { "method": "POST", "path": "/charges", "description": "Create a charge", "params": { "amount": "Amount in cents", "currency": "Three-letter ISO code", "source": "Payment source token" }, "exampleResponse": "{\"id\":\"ch_1234\",\"amount\":2000,\"currency\":\"usd\",\"status\":\"succeeded\"}" },
-      { "method": "GET", "path": "/customers", "description": "List all customers", "params": { "limit": "Number of results" } }
+      {
+        "method": "POST",
+        "path": "/charges",
+        "description": "Create a charge",
+        "params": {
+          "amount": "Amount in cents",
+          "currency": "Three-letter ISO code",
+          "source": "Payment source token"
+        },
+        "exampleResponse": "{\"id\":\"ch_1234\",\"amount\":2000,\"currency\":\"usd\",\"status\":\"succeeded\"}"
+      },
+      {
+        "method": "GET",
+        "path": "/customers",
+        "description": "List all customers",
+        "params": {
+          "limit": "Number of results"
+        }
+      }
     ],
-    "tags": ["payments", "billing", "subscriptions", "fintech", "commerce"],
+    "tags": [
+      "payments",
+      "billing",
+      "subscriptions",
+      "fintech",
+      "commerce"
+    ],
     "savedCount": 2456,
     "featured": true,
     "createdAt": "2024-01-08T00:00:00.000Z"
@@ -285,10 +554,33 @@
     "pricing": "free",
     "docsUrl": "https://developer.spotify.com/documentation/web-api",
     "exampleEndpoints": [
-      { "method": "GET", "path": "/search?q={query}&type=track", "description": "Search for tracks", "params": { "q": "Search query", "type": "track | album | artist", "limit": "Max results" }, "exampleResponse": "{\"tracks\":{\"items\":[{\"name\":\"Bohemian Rhapsody\",\"artists\":[{\"name\":\"Queen\"}]}]}}" },
-      { "method": "GET", "path": "/me/top/tracks", "description": "Get user's top tracks", "params": { "time_range": "short_term | medium_term | long_term" } }
+      {
+        "method": "GET",
+        "path": "/search?q={query}&type=track",
+        "description": "Search for tracks",
+        "params": {
+          "q": "Search query",
+          "type": "track | album | artist",
+          "limit": "Max results"
+        },
+        "exampleResponse": "{\"tracks\":{\"items\":[{\"name\":\"Bohemian Rhapsody\",\"artists\":[{\"name\":\"Queen\"}]}]}}"
+      },
+      {
+        "method": "GET",
+        "path": "/me/top/tracks",
+        "description": "Get user's top tracks",
+        "params": {
+          "time_range": "short_term | medium_term | long_term"
+        }
+      }
     ],
-    "tags": ["music", "streaming", "playlists", "audio", "entertainment"],
+    "tags": [
+      "music",
+      "streaming",
+      "playlists",
+      "audio",
+      "entertainment"
+    ],
     "savedCount": 1890,
     "featured": true,
     "createdAt": "2024-01-12T00:00:00.000Z"
@@ -306,11 +598,30 @@
     "pricing": "free",
     "docsUrl": "https://pokeapi.co/docs/v2",
     "exampleEndpoints": [
-      { "method": "GET", "path": "/pokemon/{name}", "description": "Get Pokémon by name or ID", "exampleResponse": "{\"name\":\"pikachu\",\"id\":25,\"types\":[{\"type\":{\"name\":\"electric\"}}],\"height\":4}" },
-      { "method": "GET", "path": "/type/{name}", "description": "Get type matchup data" },
-      { "method": "GET", "path": "/evolution-chain/{id}", "description": "Get evolution chain" }
+      {
+        "method": "GET",
+        "path": "/pokemon/{name}",
+        "description": "Get Pokémon by name or ID",
+        "exampleResponse": "{\"name\":\"pikachu\",\"id\":25,\"types\":[{\"type\":{\"name\":\"electric\"}}],\"height\":4}"
+      },
+      {
+        "method": "GET",
+        "path": "/type/{name}",
+        "description": "Get type matchup data"
+      },
+      {
+        "method": "GET",
+        "path": "/evolution-chain/{id}",
+        "description": "Get evolution chain"
+      }
     ],
-    "tags": ["pokemon", "gaming", "rest", "open-data", "learning"],
+    "tags": [
+      "pokemon",
+      "gaming",
+      "rest",
+      "open-data",
+      "learning"
+    ],
     "savedCount": 1654,
     "featured": false,
     "createdAt": "2024-01-14T00:00:00.000Z"
@@ -328,10 +639,29 @@
     "pricing": "free",
     "docsUrl": "https://docs.thedogapi.com",
     "exampleEndpoints": [
-      { "method": "GET", "path": "/images/search?limit=5", "description": "Get random dog images", "params": { "limit": "Number of images", "breed_ids": "Filter by breed" }, "exampleResponse": "[{\"url\":\"https://cdn2.thedogapi.com/images/abc123.jpg\",\"breeds\":[{\"name\":\"Labrador\"}]}]" },
-      { "method": "GET", "path": "/breeds", "description": "List all dog breeds" }
+      {
+        "method": "GET",
+        "path": "/images/search?limit=5",
+        "description": "Get random dog images",
+        "params": {
+          "limit": "Number of images",
+          "breed_ids": "Filter by breed"
+        },
+        "exampleResponse": "[{\"url\":\"https://cdn2.thedogapi.com/images/abc123.jpg\",\"breeds\":[{\"name\":\"Labrador\"}]}]"
+      },
+      {
+        "method": "GET",
+        "path": "/breeds",
+        "description": "List all dog breeds"
+      }
     ],
-    "tags": ["dogs", "images", "animals", "random", "breeds"],
+    "tags": [
+      "dogs",
+      "images",
+      "animals",
+      "random",
+      "breeds"
+    ],
     "savedCount": 876,
     "featured": false,
     "createdAt": "2024-02-15T00:00:00.000Z"
@@ -349,10 +679,29 @@
     "pricing": "free",
     "docsUrl": "https://openlibrary.org/developers/api",
     "exampleEndpoints": [
-      { "method": "GET", "path": "/search.json?q={query}", "description": "Search books by title or author", "params": { "q": "Search query", "limit": "Results per page" }, "exampleResponse": "{\"numFound\":1234,\"docs\":[{\"title\":\"Clean Code\",\"author_name\":[\"Robert C. Martin\"]}]}" },
-      { "method": "GET", "path": "/isbn/{isbn}.json", "description": "Get book by ISBN" }
+      {
+        "method": "GET",
+        "path": "/search.json?q={query}",
+        "description": "Search books by title or author",
+        "params": {
+          "q": "Search query",
+          "limit": "Results per page"
+        },
+        "exampleResponse": "{\"numFound\":1234,\"docs\":[{\"title\":\"Clean Code\",\"author_name\":[\"Robert C. Martin\"]}]}"
+      },
+      {
+        "method": "GET",
+        "path": "/isbn/{isbn}.json",
+        "description": "Get book by ISBN"
+      }
     ],
-    "tags": ["books", "library", "isbn", "literature", "open-data"],
+    "tags": [
+      "books",
+      "library",
+      "isbn",
+      "literature",
+      "open-data"
+    ],
     "savedCount": 923,
     "featured": false,
     "createdAt": "2024-02-18T00:00:00.000Z"
@@ -370,11 +719,33 @@
     "pricing": "free",
     "docsUrl": "https://restcountries.com",
     "exampleEndpoints": [
-      { "method": "GET", "path": "/all", "description": "Get all countries", "exampleResponse": "[{\"name\":{\"common\":\"India\"},\"capital\":[\"New Delhi\"],\"population\":1380004385}]" },
-      { "method": "GET", "path": "/name/{name}", "description": "Search by country name" },
-      { "method": "GET", "path": "/region/{region}", "description": "Filter by region", "params": { "region": "africa | americas | asia | europe | oceania" } }
+      {
+        "method": "GET",
+        "path": "/all",
+        "description": "Get all countries",
+        "exampleResponse": "[{\"name\":{\"common\":\"India\"},\"capital\":[\"New Delhi\"],\"population\":1380004385}]"
+      },
+      {
+        "method": "GET",
+        "path": "/name/{name}",
+        "description": "Search by country name"
+      },
+      {
+        "method": "GET",
+        "path": "/region/{region}",
+        "description": "Filter by region",
+        "params": {
+          "region": "africa | americas | asia | europe | oceania"
+        }
+      }
     ],
-    "tags": ["countries", "geography", "flags", "population", "reference"],
+    "tags": [
+      "countries",
+      "geography",
+      "flags",
+      "population",
+      "reference"
+    ],
     "savedCount": 1087,
     "featured": false,
     "createdAt": "2024-01-28T00:00:00.000Z"
@@ -392,10 +763,25 @@
     "pricing": "freemium",
     "docsUrl": "https://www.exchangerate-api.com/docs",
     "exampleEndpoints": [
-      { "method": "GET", "path": "/{key}/latest/USD", "description": "Latest rates from USD base", "exampleResponse": "{\"result\":\"success\",\"conversion_rates\":{\"EUR\":0.92,\"GBP\":0.79,\"INR\":83.12}}" },
-      { "method": "GET", "path": "/{key}/pair/USD/EUR/100", "description": "Convert 100 USD to EUR" }
+      {
+        "method": "GET",
+        "path": "/{key}/latest/USD",
+        "description": "Latest rates from USD base",
+        "exampleResponse": "{\"result\":\"success\",\"conversion_rates\":{\"EUR\":0.92,\"GBP\":0.79,\"INR\":83.12}}"
+      },
+      {
+        "method": "GET",
+        "path": "/{key}/pair/USD/EUR/100",
+        "description": "Convert 100 USD to EUR"
+      }
     ],
-    "tags": ["currency", "exchange-rates", "forex", "conversion", "finance"],
+    "tags": [
+      "currency",
+      "exchange-rates",
+      "forex",
+      "conversion",
+      "finance"
+    ],
     "savedCount": 1198,
     "featured": false,
     "createdAt": "2024-02-20T00:00:00.000Z"
@@ -413,10 +799,28 @@
     "pricing": "freemium",
     "docsUrl": "https://huggingface.co/docs/api-inference",
     "exampleEndpoints": [
-      { "method": "POST", "path": "/{model_id}", "description": "Run inference on a model", "params": { "inputs": "Input text or data" }, "exampleResponse": "[{\"label\":\"POSITIVE\",\"score\":0.9998}]" },
-      { "method": "GET", "path": "/", "description": "Check model loading status" }
+      {
+        "method": "POST",
+        "path": "/{model_id}",
+        "description": "Run inference on a model",
+        "params": {
+          "inputs": "Input text or data"
+        },
+        "exampleResponse": "[{\"label\":\"POSITIVE\",\"score\":0.9998}]"
+      },
+      {
+        "method": "GET",
+        "path": "/",
+        "description": "Check model loading status"
+      }
     ],
-    "tags": ["ml", "inference", "nlp", "transformers", "huggingface"],
+    "tags": [
+      "ml",
+      "inference",
+      "nlp",
+      "transformers",
+      "huggingface"
+    ],
     "savedCount": 1890,
     "featured": true,
     "createdAt": "2024-02-25T00:00:00.000Z"
