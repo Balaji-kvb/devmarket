@@ -40,7 +40,7 @@ jobs:
           DATABASE_URL: postgresql://postgres:postgres@localhost:5432/devmarket
         run: |
           npx prisma validate --schema=frontend/prisma/schema.prisma
-          npm run --workspace=frontend exec prisma generate
+          npm run prisma:generate --workspace=frontend
       - name: Build
         run: npm run build --workspace=frontend
         env:
