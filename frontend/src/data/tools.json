@@ -168,7 +168,7 @@
       "desktop",
       "web"
     ],
-    "license": "freemium",
+    "license": "premium",
     "websiteUrl": "https://www.postman.com",
     "docsUrl": "https://learning.postman.com/docs",
     "tags": [
@@ -302,7 +302,7 @@
       "web",
       "desktop"
     ],
-    "license": "freemium",
+    "license": "premium",
     "websiteUrl": "https://www.figma.com",
     "docsUrl": "https://help.figma.com",
     "tags": [
@@ -387,7 +387,7 @@
     "platform": [
       "desktop"
     ],
-    "license": "freemium",
+    "license": "premium",
     "websiteUrl": "https://tableplus.com",
     "docsUrl": "https://docs.tableplus.com",
     "tags": [
@@ -520,7 +520,7 @@
     "platform": [
       "desktop"
     ],
-    "license": "freemium",
+    "license": "premium",
     "websiteUrl": "https://cursor.sh",
     "docsUrl": "https://docs.cursor.com",
     "tags": [
@@ -606,7 +606,7 @@
     "platform": [
       "desktop"
     ],
-    "license": "freemium",
+    "license": "premium",
     "websiteUrl": "https://portswigger.net/burp",
     "docsUrl": "https://portswigger.net/burp/documentation",
     "tags": [
@@ -806,7 +806,7 @@
       "web",
       "cli"
     ],
-    "license": "freemium",
+    "license": "premium",
     "websiteUrl": "https://github.com/features/actions",
     "docsUrl": "https://docs.github.com/en/actions",
     "tags": [

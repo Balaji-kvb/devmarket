@@ -49,11 +49,11 @@ export type NewsCategory =
 
 // ─── Shared Enumerations ────────────────────────────────────────
 
-export type PricingModel = "free" | "freemium" | "paid";
+export type PricingModel = "free" | "premium" | "paid";
 export type AuthMethod = "api-key" | "oauth" | "none";
 export type HttpMethod = "GET" | "POST" | "PUT" | "DELETE" | "PATCH";
 export type Platform = "web" | "desktop" | "cli" | "mobile";
-export type License = "open-source" | "paid" | "freemium";
+export type License = "open-source" | "paid" | "premium";
 
 /** Sort options available across marketplace and directory views. */
 export type SortOption = "popular" | "newest" | "alphabetical";

@@ -9,7 +9,7 @@
     "category": "Weather",
     "baseUrl": "https://api.openweathermap.org/data/2.5",
     "authMethod": "api-key",
-    "pricing": "freemium",
+    "pricing": "premium",
     "docsUrl": "https://openweathermap.org/api",
     "exampleEndpoints": [
       {
@@ -92,7 +92,7 @@
     "category": "AI & ML",
     "baseUrl": "https://generativelanguage.googleapis.com/v1beta",
     "authMethod": "api-key",
-    "pricing": "freemium",
+    "pricing": "premium",
     "docsUrl": "https://ai.google.dev/docs",
     "exampleEndpoints": [
       {
@@ -274,7 +274,7 @@
     "category": "Media",
     "baseUrl": "https://newsapi.org/v2",
     "authMethod": "api-key",
-    "pricing": "freemium",
+    "pricing": "premium",
     "docsUrl": "https://newsapi.org/docs",
     "exampleEndpoints": [
       {
@@ -318,7 +318,7 @@
     "category": "Finance",
     "baseUrl": "https://api.coingecko.com/api/v3",
     "authMethod": "none",
-    "pricing": "freemium",
+    "pricing": "premium",
     "docsUrl": "https://docs.coingecko.com",
     "exampleEndpoints": [
       {
@@ -463,7 +463,7 @@
     "category": "Communication",
     "baseUrl": "https://api.sendgrid.com/v3",
     "authMethod": "api-key",
-    "pricing": "freemium",
+    "pricing": "premium",
     "docsUrl": "https://docs.sendgrid.com",
     "exampleEndpoints": [
       {
@@ -760,7 +760,7 @@
     "category": "Finance",
     "baseUrl": "https://v6.exchangerate-api.com/v6",
     "authMethod": "api-key",
-    "pricing": "freemium",
+    "pricing": "premium",
     "docsUrl": "https://www.exchangerate-api.com/docs",
     "exampleEndpoints": [
       {
@@ -796,7 +796,7 @@
     "category": "AI & ML",
     "baseUrl": "https://api-inference.huggingface.co/models",
     "authMethod": "api-key",
-    "pricing": "freemium",
+    "pricing": "premium",
     "docsUrl": "https://huggingface.co/docs/api-inference",
     "exampleEndpoints": [
       {

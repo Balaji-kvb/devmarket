@@ -27,7 +27,7 @@ const CATEGORY_OPTIONS = [
 
 const PRICING_OPTIONS = [
   { value: "free", label: "Free" },
-  { value: "freemium", label: "Freemium" },
+  { value: "premium", label: "Premium" },
   { value: "paid", label: "Paid" },
 ];
 

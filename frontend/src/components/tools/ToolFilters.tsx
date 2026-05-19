@@ -30,7 +30,7 @@ const PLATFORM_OPTIONS = [
 
 const LICENSE_OPTIONS = [
   { value: "open-source", label: "Open Source" },
-  { value: "freemium", label: "Freemium" },
+  { value: "premium", label: "Premium" },
   { value: "paid", label: "Paid" },
 ];
 

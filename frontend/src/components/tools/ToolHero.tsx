@@ -13,7 +13,7 @@ import type { ToolItem } from "@/lib/data";
 
 const LICENSE_VARIANT: Record<string, "success" | "warning" | "info"> = {
   "open-source": "success",
-  freemium: "info",
+  premium: "info",
   paid: "warning",
 };
 

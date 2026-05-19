@@ -14,7 +14,7 @@ const AUTH_LABELS: Record<string, string> = {
 
 const PRICING_VARIANT: Record<string, "success" | "warning" | "info"> = {
   free: "success",
-  freemium: "info",
+  premium: "info",
   paid: "warning",
 };
 
